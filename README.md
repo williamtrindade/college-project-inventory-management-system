@@ -8,7 +8,7 @@ https://start.spring.io/
 - Language: Java  
 - Spring Boot: 2.1.6
 - Project Metadata  
--- Group: io.github.williamtrindade
+-- Group: io.github.williamtrindade  
 -- Artifact: estoque
 --- Packaging: WAR
 --- Java 8
