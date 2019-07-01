@@ -1,35 +1,103 @@
-<!doctype html>
-<html lang="pt-br">
-    <head> 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <meta charset="UTF-8">
-        <title>Dashboard - JetEstoque</title>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">JetEstoque</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>JetEstoque - Home</title>
+</head>
+<body>
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">jetestoque</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/produtos">Produtos <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="home.html">Dashboard <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produtos.html">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="clientes.html">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="vendas.html">Vendas</a>
                     </li>
                 </ul>
             </div>
-        </nav>
-        <div class="containber shadow p-3 mb-5 bg-white rounded">
-            <div class="row">
-                <div class="col-md6">
-                    <h1>Nosso Sistema</h1>
-                </div>
-                <div class="col-md6"></div>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <!--USUÁRIO LOGADO-->
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Usuario
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Sair</a>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-    </body>
-    <!-- SCRIPTS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </nav>
+    <!--MAIN-->
+    <div class="main">
+        <div class="section">
+            <div class="container">
+                <h3 style="margin-top:1%;text-align:center">Bem Vindo a sua Dashboard</h3>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card rounded" style="margin-top: 4%;text-align: center;">
+                            <div class="card-header">   
+                                Vendas             
+                            </div>
+                            <div class="card-body">
+                                <h1>500</h1>
+                                <p class="card-text">Vendas Realizadas.</p>
+                                <a href="nova-venda.html" class="btn btn-primary">Registar Nova Venda</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="card rounded" style="margin-top: 4%;">
+                            <div class="card-header">   
+                                Produtos             
+                            </div>
+                            <div class="card-body">
+                                <h1>500</h1>
+                                <p class="card-text">Produtos cadastrados.</p>
+                                <a href="#" class="btn btn-primary">Visualizar Produtos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="card rounded" style="margin-top: 4%;">
+                            <div class="card-header">   
+                                Clientes             
+                            </div>
+                            <div class="card-body">
+                                <h1>20</h1>
+                                <p class="card-text">Clientes cadastrados.</p>
+                                <a href="#" class="btn btn-primary">Visualizar Produtos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="bootstrap/jquery-3.3.1.slim.min.js"></script>
+<script src="bootstrap/popper.min.js"></script>
+<script src="bootstrap/bootstrap.min.js"></script>
 </html>

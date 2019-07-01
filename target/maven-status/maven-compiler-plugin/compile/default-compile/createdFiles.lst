@@ -1,2 +1,9 @@
+io\github\williamtrindade\estoque\controller\LoginController.class
 io\github\williamtrindade\estoque\EstoqueApplication.class
+io\github\williamtrindade\estoque\model\Usuario.class
+io\github\williamtrindade\estoque\dao\UsuarioDAO.class
 io\github\williamtrindade\estoque\ServletInitializer.class
+io\github\williamtrindade\estoque\dao\ProdutoDAO.class
+io\github\williamtrindade\estoque\model\Produto.class
+io\github\williamtrindade\estoque\dao\ConnectPostgres.class
+io\github\williamtrindade\estoque\model\Cliente.class
