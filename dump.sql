@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 10.9 (Ubuntu 10.9-0ubuntu0.18.04.1)
--- Dumped by pg_dump version 10.9 (Ubuntu 10.9-0ubuntu0.18.04.1)
+-- Dumped from database version 9.6.12
+-- Dumped by pg_dump version 11.2
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -12,46 +12,8 @@ SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
-SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
-
-DROP DATABASE IF EXISTS db_estoque;
---
--- Name: db_estoque; Type: DATABASE; Schema: -; Owner: postgres
---
-
-CREATE DATABASE db_estoque WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'en_US.UTF-8' LC_CTYPE = 'en_US.UTF-8';
-
-
-ALTER DATABASE db_estoque OWNER TO postgres;
-
-\connect db_estoque
-
-SET statement_timeout = 0;
-SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
-SET client_encoding = 'UTF8';
-SET standard_conforming_strings = on;
-SELECT pg_catalog.set_config('search_path', '', false);
-SET check_function_bodies = false;
-SET xmloption = content;
-SET client_min_messages = warning;
-SET row_security = off;
-
---
--- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
---
-
-CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
-
-
---
--- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
---
-
-COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
-
 
 SET default_tablespace = '';
 
@@ -72,29 +34,7 @@ CREATE TABLE public.entrada (
 ALTER TABLE public.entrada OWNER TO postgres;
 
 --
--- Name: entrada_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
-CREATE SEQUENCE public.entrada_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.entrada_id_seq OWNER TO postgres;
-
---
--- Name: entrada_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
-
-ALTER SEQUENCE public.entrada_id_seq OWNED BY public.entrada.id;
-
-
---
--- Name: estoque; Type: TABLE; Schema: public; Owner: postgres
+-- Name: estoque; Type: TABLE; Schema: public; Owner: pdp
 --
 
 CREATE TABLE public.estoque (
@@ -104,14 +44,13 @@ CREATE TABLE public.estoque (
 );
 
 
-ALTER TABLE public.estoque OWNER TO postgres;
+ALTER TABLE public.estoque OWNER TO pdp;
 
 --
--- Name: estoque_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: estoque_id_seq; Type: SEQUENCE; Schema: public; Owner: pdp
 --
 
 CREATE SEQUENCE public.estoque_id_seq
-    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -119,34 +58,33 @@ CREATE SEQUENCE public.estoque_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.estoque_id_seq OWNER TO postgres;
+ALTER TABLE public.estoque_id_seq OWNER TO pdp;
 
 --
--- Name: estoque_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: estoque_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pdp
 --
 
 ALTER SEQUENCE public.estoque_id_seq OWNED BY public.estoque.id;
 
 
 --
--- Name: produto; Type: TABLE; Schema: public; Owner: postgres
+-- Name: produto; Type: TABLE; Schema: public; Owner: pdp
 --
 
 CREATE TABLE public.produto (
     id integer NOT NULL,
-    nome text,
-    descricao text
+    nome character varying(50),
+    descricao character varying(50)
 );
 
 
-ALTER TABLE public.produto OWNER TO postgres;
+ALTER TABLE public.produto OWNER TO pdp;
 
 --
--- Name: produto_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: produto_id_seq; Type: SEQUENCE; Schema: public; Owner: pdp
 --
 
 CREATE SEQUENCE public.produto_id_seq
-    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -154,17 +92,17 @@ CREATE SEQUENCE public.produto_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.produto_id_seq OWNER TO postgres;
+ALTER TABLE public.produto_id_seq OWNER TO pdp;
 
 --
--- Name: produto_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: produto_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pdp
 --
 
 ALTER SEQUENCE public.produto_id_seq OWNED BY public.produto.id;
 
 
 --
--- Name: saida; Type: TABLE; Schema: public; Owner: postgres
+-- Name: saida; Type: TABLE; Schema: public; Owner: pdp
 --
 
 CREATE TABLE public.saida (
@@ -175,14 +113,13 @@ CREATE TABLE public.saida (
 );
 
 
-ALTER TABLE public.saida OWNER TO postgres;
+ALTER TABLE public.saida OWNER TO pdp;
 
 --
--- Name: saida_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: saida_id_seq; Type: SEQUENCE; Schema: public; Owner: pdp
 --
 
 CREATE SEQUENCE public.saida_id_seq
-    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -190,10 +127,10 @@ CREATE SEQUENCE public.saida_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.saida_id_seq OWNER TO postgres;
+ALTER TABLE public.saida_id_seq OWNER TO pdp;
 
 --
--- Name: saida_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: saida_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pdp
 --
 
 ALTER SEQUENCE public.saida_id_seq OWNED BY public.saida.id;
@@ -205,20 +142,19 @@ ALTER SEQUENCE public.saida_id_seq OWNED BY public.saida.id;
 
 CREATE TABLE public.usuario (
     id integer NOT NULL,
-    nome text,
-    email text NOT NULL,
-    senha text NOT NULL
+    nome character varying(50),
+    senha character varying(50),
+    email character varying(60)
 );
 
 
 ALTER TABLE public.usuario OWNER TO postgres;
 
 --
--- Name: usuario_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: usuario_id_seq; Type: SEQUENCE; Schema: public; Owner: pdp
 --
 
 CREATE SEQUENCE public.usuario_id_seq
-    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -226,38 +162,45 @@ CREATE SEQUENCE public.usuario_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.usuario_id_seq OWNER TO postgres;
+ALTER TABLE public.usuario_id_seq OWNER TO pdp;
 
 --
--- Name: usuario_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: usuario_id_seq1; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE public.usuario_id_seq OWNED BY public.usuario.id;
+CREATE SEQUENCE public.usuario_id_seq1
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.usuario_id_seq1 OWNER TO postgres;
+
+--
+-- Name: usuario_id_seq1; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.usuario_id_seq1 OWNED BY public.usuario.id;
 
 
 --
--- Name: entrada id; Type: DEFAULT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.entrada ALTER COLUMN id SET DEFAULT nextval('public.entrada_id_seq'::regclass);
-
-
---
--- Name: estoque id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: estoque id; Type: DEFAULT; Schema: public; Owner: pdp
 --
 
 ALTER TABLE ONLY public.estoque ALTER COLUMN id SET DEFAULT nextval('public.estoque_id_seq'::regclass);
 
 
 --
--- Name: produto id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: produto id; Type: DEFAULT; Schema: public; Owner: pdp
 --
 
 ALTER TABLE ONLY public.produto ALTER COLUMN id SET DEFAULT nextval('public.produto_id_seq'::regclass);
 
 
 --
--- Name: saida id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: saida id; Type: DEFAULT; Schema: public; Owner: pdp
 --
 
 ALTER TABLE ONLY public.saida ALTER COLUMN id SET DEFAULT nextval('public.saida_id_seq'::regclass);
@@ -267,82 +210,85 @@ ALTER TABLE ONLY public.saida ALTER COLUMN id SET DEFAULT nextval('public.saida_
 -- Name: usuario id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.usuario ALTER COLUMN id SET DEFAULT nextval('public.usuario_id_seq'::regclass);
+ALTER TABLE ONLY public.usuario ALTER COLUMN id SET DEFAULT nextval('public.usuario_id_seq1'::regclass);
 
 
 --
 -- Data for Name: entrada; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.entrada (id, data, produto_id, preco) FROM stdin;
-\.
 
 
 --
--- Data for Name: estoque; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: estoque; Type: TABLE DATA; Schema: public; Owner: pdp
 --
 
-COPY public.estoque (id, produto_id, quantidade) FROM stdin;
-\.
-
-
---
--- Data for Name: produto; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY public.produto (id, nome, descricao) FROM stdin;
-\.
+INSERT INTO public.estoque VALUES (1, 1, 123);
+INSERT INTO public.estoque VALUES (5, 8, 0);
+INSERT INTO public.estoque VALUES (6, 9, 0);
 
 
 --
--- Data for Name: saida; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: produto; Type: TABLE DATA; Schema: public; Owner: pdp
 --
 
-COPY public.saida (id, data, produto_id, preco) FROM stdin;
-\.
+INSERT INTO public.produto VALUES (1, 'martelo', 'cor: prata');
+INSERT INTO public.produto VALUES (2, 'prego', 'com 50 un');
+INSERT INTO public.produto VALUES (3, 'abc', 'descrição teste');
+INSERT INTO public.produto VALUES (4, 'sw', 'sw');
+INSERT INTO public.produto VALUES (5, 'ds', 'ds');
+INSERT INTO public.produto VALUES (6, 'dsss', 'dssdss');
+INSERT INTO public.produto VALUES (7, 'dsdsdd', 'dss');
+INSERT INTO public.produto VALUES (8, 'fr', 'fr');
+INSERT INTO public.produto VALUES (9, 'fr', 'frffffffffffffffffffffffffffffffffffff');
+
+
+--
+-- Data for Name: saida; Type: TABLE DATA; Schema: public; Owner: pdp
+--
+
 
 
 --
 -- Data for Name: usuario; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.usuario (id, nome, email, senha) FROM stdin;
-\.
+INSERT INTO public.usuario VALUES (1, 'Admin', '1234', 'admin@gmail.com');
 
 
 --
--- Name: entrada_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: estoque_id_seq; Type: SEQUENCE SET; Schema: public; Owner: pdp
 --
 
-SELECT pg_catalog.setval('public.entrada_id_seq', 1, false);
-
-
---
--- Name: estoque_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.estoque_id_seq', 1, false);
+SELECT pg_catalog.setval('public.estoque_id_seq', 6, true);
 
 
 --
--- Name: produto_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: produto_id_seq; Type: SEQUENCE SET; Schema: public; Owner: pdp
 --
 
-SELECT pg_catalog.setval('public.produto_id_seq', 1, false);
+SELECT pg_catalog.setval('public.produto_id_seq', 9, true);
 
 
 --
--- Name: saida_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: saida_id_seq; Type: SEQUENCE SET; Schema: public; Owner: pdp
 --
 
 SELECT pg_catalog.setval('public.saida_id_seq', 1, false);
 
 
 --
--- Name: usuario_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: usuario_id_seq; Type: SEQUENCE SET; Schema: public; Owner: pdp
 --
 
 SELECT pg_catalog.setval('public.usuario_id_seq', 1, false);
+
+
+--
+-- Name: usuario_id_seq1; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.usuario_id_seq1', 1, true);
 
 
 --
@@ -354,62 +300,39 @@ ALTER TABLE ONLY public.entrada
 
 
 --
--- Name: estoque estoque_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: estoque estoque_pkey; Type: CONSTRAINT; Schema: public; Owner: pdp
 --
 
 ALTER TABLE ONLY public.estoque
-    ADD CONSTRAINT estoque_pk PRIMARY KEY (id);
+    ADD CONSTRAINT estoque_pkey PRIMARY KEY (id);
 
 
 --
--- Name: produto produto_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: produto produto_pkey; Type: CONSTRAINT; Schema: public; Owner: pdp
 --
 
 ALTER TABLE ONLY public.produto
-    ADD CONSTRAINT produto_pk PRIMARY KEY (id);
+    ADD CONSTRAINT produto_pkey PRIMARY KEY (id);
 
 
 --
--- Name: saida saida_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: saida saida_pkey; Type: CONSTRAINT; Schema: public; Owner: pdp
 --
 
 ALTER TABLE ONLY public.saida
-    ADD CONSTRAINT saida_pk PRIMARY KEY (id);
+    ADD CONSTRAINT saida_pkey PRIMARY KEY (id);
 
 
 --
--- Name: usuario usuario_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: usuario usuario_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.usuario
-    ADD CONSTRAINT usuario_pk PRIMARY KEY (id);
+    ADD CONSTRAINT usuario_pkey PRIMARY KEY (id);
 
 
 --
--- Name: usuario_email_uindex; Type: INDEX; Schema: public; Owner: postgres
---
-
-CREATE UNIQUE INDEX usuario_email_uindex ON public.usuario USING btree (email);
-
-
---
--- Name: entrada produto_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.entrada
-    ADD CONSTRAINT produto_id FOREIGN KEY (produto_id) REFERENCES public.produto(id);
-
-
---
--- Name: saida produto_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.saida
-    ADD CONSTRAINT produto_id FOREIGN KEY (produto_id) REFERENCES public.produto(id);
-
-
---
--- Name: estoque produto_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: estoque produto_id; Type: FK CONSTRAINT; Schema: public; Owner: pdp
 --
 
 ALTER TABLE ONLY public.estoque
@@ -417,10 +340,11 @@ ALTER TABLE ONLY public.estoque
 
 
 --
--- Name: SCHEMA public; Type: ACL; Schema: -; Owner: postgres
+-- Name: saida produto_id; Type: FK CONSTRAINT; Schema: public; Owner: pdp
 --
 
-GRANT ALL ON SCHEMA public TO PUBLIC;
+ALTER TABLE ONLY public.saida
+    ADD CONSTRAINT produto_id FOREIGN KEY (produto_id) REFERENCES public.produto(id);
 
 
 --
