@@ -136,14 +136,52 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/ProdutoDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+            <state relative-caret-position="378">
+              <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="uml://DATABASE/3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.SCHEMA:db_estoque.public">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>DATABASE</ID>
+              <OriginalElement>3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.SCHEMA:db_estoque.public</OriginalElement>
+              <nodes>
+                <node x="73.25" y="0.0">3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.TABLE:db_estoque.public.produto</node>
+                <node x="0.0" y="152.0">3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.TABLE:db_estoque.public.saida</node>
+                <node x="160.0" y="163.5">3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.TABLE:db_estoque.public.estoque</node>
+                <node x="342.0" y="0.0">3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.TABLE:db_estoque.public.entrada</node>
+                <node x="0.0" y="322.0">3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.TABLE:db_estoque.public.usuario</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.TABLE:db_estoque.public.estoque" target="3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.TABLE:db_estoque.public.produto">
+                  <point x="0.0" y="-51.0" />
+                  <point x="228.5" y="127.0" />
+                  <point x="187.25" y="127.0" />
+                  <point x="38.0" y="51.0" />
+                </edge>
+                <edge source="3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.TABLE:db_estoque.public.saida" target="3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.TABLE:db_estoque.public.produto">
+                  <point x="0.0" y="-62.5" />
+                  <point x="70.0" y="127.0" />
+                  <point x="111.25" y="127.0" />
+                  <point x="-38.0" y="51.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.0" x="241.0" y="223.5" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Key columns</Category>
+                <Category>Columns</Category>
+              </Categories>
             </state>
           </provider>
         </entry>
@@ -497,18 +535,18 @@
       <option name="presentableId" value="Default" />
       <updated>1562771798951</updated>
       <workItem from="1562771800527" duration="1045000" />
-      <workItem from="1562773068004" duration="14099000" />
+      <workItem from="1562773068004" duration="15175000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15144000" />
+    <option name="totallyTimeSpent" value="16220000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1366" y="15" width="1920" height="1065" extended-state="6" />
+    <frame x="-3852" y="15" width="1920" height="1065" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13645834" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13645834" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -531,7 +569,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.184375" />
+      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.184375" />
       <window_info anchor="right" id="Maven" order="4" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
     </layout>
@@ -755,11 +793,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/ProdutoDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+        <state relative-caret-position="378">
+          <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.SCHEMA:db_estoque.public">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.SCHEMA:db_estoque.public</OriginalElement>
+          <nodes>
+            <node x="73.25" y="0.0">3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.TABLE:db_estoque.public.produto</node>
+            <node x="0.0" y="152.0">3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.TABLE:db_estoque.public.saida</node>
+            <node x="160.0" y="163.5">3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.TABLE:db_estoque.public.estoque</node>
+            <node x="342.0" y="0.0">3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.TABLE:db_estoque.public.entrada</node>
+            <node x="0.0" y="322.0">3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.TABLE:db_estoque.public.usuario</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.TABLE:db_estoque.public.estoque" target="3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.TABLE:db_estoque.public.produto">
+              <point x="0.0" y="-51.0" />
+              <point x="228.5" y="127.0" />
+              <point x="187.25" y="127.0" />
+              <point x="38.0" y="51.0" />
+            </edge>
+            <edge source="3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.TABLE:db_estoque.public.saida" target="3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.TABLE:db_estoque.public.produto">
+              <point x="0.0" y="-62.5" />
+              <point x="70.0" y="127.0" />
+              <point x="111.25" y="127.0" />
+              <point x="-38.0" y="51.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="241.0" y="223.5" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
         </state>
       </provider>
     </entry>
