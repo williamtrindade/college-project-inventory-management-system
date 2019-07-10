@@ -1,51 +1,70 @@
 package io.github.williamtrindade.estoque.dao;
 
+import io.github.williamtrindade.estoque.dto.ProdutoDTO;
 import io.github.williamtrindade.estoque.model.Produto;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class ProdutoDAO {
 
-    public boolean create (Produto produto) {
-        try (Connection conn = ConnectPostgres.getConnection()) {
-            String sql = "INSERT INTO produto (nome, descricao, preco, quantidade) " + "values (?, ?, ?, ?)";
+    public int insertProduto(Produto produto) {
+        try ( Connection conn = ConnectPostgres.getConnection() ) {
+            String sql = "INSERT INTO produto (nome, descricao) values (?, ?)";
+            PreparedStatement pre = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            pre.setString(1, produto.getNome());
+            pre.setString(2, produto.getDescricao());
+
+            pre.executeUpdate();
+            ResultSet rs = pre.getGeneratedKeys();
+            rs.next();
+            return rs.getInt(1);
+        } catch ( Exception e ) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    public List<ProdutoDTO> getProdutos() {
+        List<ProdutoDTO> produtos = new LinkedList<>();
+        try ( Connection conn = ConnectPostgres.getConnection() ) {
+            Statement stmt = conn.createStatement();
+            ResultSet rs   = stmt.executeQuery("select p.id, p.nome, p.descricao, e.quantidade " +
+                    "from produto p, estoque e where p.id = e.produto_id;" );
+            while ( rs.next() ) {
+                produtos.add( new ProdutoDTO(
+                                rs.getInt("id"),
+                                rs.getString("nome"),
+                                rs.getString("descricao"),
+                        rs.getInt("quantidade")
+                        )
+                );
+            }
+        } catch ( Exception e ) {
+        }
+        return produtos;
+    }
+
+    public boolean update(Produto produto) {
+        try ( Connection conn = ConnectPostgres.getConnection() ) {
+            String sql = "UPDATE produto SET nome = ?, descricao = ? WHERE id = ?";
             PreparedStatement pre = conn.prepareStatement(sql);
             pre.setString(1, produto.getNome());
             pre.setString(2, produto.getDescricao());
-            pre.setFloat(3, produto.getPreco());
-            pre.setInt(4, produto.getQuantidade());
+            pre.setInt(3, produto.getId());
             // Teste
-            System.out.println("sql -> "+sql);
-            if(pre.executeUpdate() > 0){
+            System.out.println("sql -> " + sql);
+            if ( pre.executeUpdate() > 0 ) {
                 return true;
             }
 
-        }catch(Exception e ){
-            return false;
+        } catch ( Exception e ) {
+            e.printStackTrace();
         }
         return false;
-    }
-
-    public ArrayList<Produto> getProdutos() {
-        ArrayList<Produto> produtos = new ArrayList<>();
-        try (Connection conn = ConnectPostgres.getConnection()){
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM produtos");
-            while(rs.next()) {
-                Produto produto;
-                produto = new Produto(
-                    rs.getInt("id"),
-                    rs.getString("nome"),
-                    rs.getString("descricao"),
-                    rs.getFloat("preco"),
-                    rs.getInt("quantidade"));
-                produtos.add(produto);
-            }
-        } catch(Exception e ) {
-        }
-        return produtos;
     }
 }

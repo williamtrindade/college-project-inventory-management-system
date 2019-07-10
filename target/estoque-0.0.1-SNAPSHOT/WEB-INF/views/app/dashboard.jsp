@@ -1,11 +1,13 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="<c:url value='/resources/bootstrap/bootstrap.min.css' />" type="text/css"/>
+    <link rel="stylesheet" href="<c:url value='/resources/css/style.css'/>"/>
     <title>JetEstoque - Home</title>
 </head>
 <body>
@@ -19,10 +21,10 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="home.html">Dashboard <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="<c:url value="/"/>">Dashboard <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="produtos.html">Produtos</a>
+                        <a class="nav-link" href="<c:url value="/produtos"/>">Produtos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="clientes.html">Clientes</a>
@@ -76,7 +78,7 @@
                             <div class="card-body">
                                 <h1>500</h1>
                                 <p class="card-text">Produtos cadastrados.</p>
-                                <a href="#" class="btn btn-primary">Visualizar Produtos</a>
+                                <a href="<c:url value="/produtos"/> class="btn btn-primary">Visualizar Produtos</a>
                             </div>
                         </div>
                     </div>
@@ -88,16 +90,14 @@
                             <div class="card-body">
                                 <h1>20</h1>
                                 <p class="card-text">Clientes cadastrados.</p>
-                                <a href="#" class="btn btn-primary">Visualizar Produtos</a>
+                                <a href="/produtos" class="btn btn-primary">Visualizar Produtos</a>
                             </div>
                         </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 </body>
-<script src="bootstrap/jquery-3.3.1.slim.min.js"></script>
-<script src="bootstrap/popper.min.js"></script>
-<script src="bootstrap/bootstrap.min.js"></script>
+<script src="<c:url value='/resources/bootstrap/jquery-3.3.1.slim.min.js'/>"></script>
+<script src="<c:url value='/resources/bootstrap/popper.min.js'/>"></script>
+<script src="<c:url value='/resources/bootstrap/bootstrap.min.js'/>"></script>
 </html>

@@ -1,13 +1,15 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>JetEstoque - Cadastro de Produto</title>
-</head>
+    <link rel="stylesheet" href="<c:url value='/resources/bootstrap/bootstrap.min.css' />" type="text/css"/>
+    <link rel="stylesheet" href="<c:url value='/resources/css/style.css'/>"/>
+    <title>JetEstoque - Cadastro de Produto</title> </head>
 <body>
     <!--NAVBAR-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -54,10 +56,10 @@
                 <h3 style="margin-top:1%;text-align:center">Cadastro de Produto</h3>
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
-                        <form method="POST" action="produtos.html">
+                        <form method="POST" action="<c:url value="/produtos/cadastrar"/>">
                             <div class="form-group">
                                 <label for="nome">Nome</label>
-                                <input name="nome" type="text" class="form-control" id="nome" aria-describedby="nomeHelp" placeholder="Digite o nome">
+                                <input autocomplete="false" name="nome" type="text" class="form-control" id="nome" aria-describedby="nomeHelp" placeholder="Digite o nome">
                                 <small id="nomeHelp" class="form-text text-muted">Dar um nome claro e simples te ajuda na pesquisa :).</small>
                             </div>
                             <div class="form-group">
@@ -65,22 +67,9 @@
                                 <input name="descricao" type="text" class="form-control" id="descricao" aria-describedby="descHelp" placeholder="Digite a descrição">
                                 <small id="nomeHelp" class="form-text text-muted">Descreva o produto.</small>
                             </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="form-group">
-                                        <label for="quantidade">Quantidade</label>
-                                        <input name="quantidade" type="number" class="form-control" id="quantidade">
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="form-group">
-                                        <label for="preco">Preço - BRL</label>
-                                        <input name="preco" type="text" class="form-control" id="preco">
-                                    </div>
-                                </div>
-                            </div>
+
                             <button type="submit" class="btn btn-success">Cadastrar</button>
-                            <a href="produtos.html" class="btn btn-outline-secondary">Voltar</a>
+                            <a href="<c:url value="/produtos"/>" class="btn btn-outline-secondary">Voltar</a>
                         </form>
                     </div>
                 </div>
@@ -89,9 +78,7 @@
         </div>
     </div>
 </body>
-<script src="bootstrap/jquery-3.3.1.slim.min.js"></script>
-<script src="bootstrap/popper.min.js"></script>
-<script src="bootstrap/bootstrap.min.js"></script>
-<script src="vanilla-masker.min.js"></script>
-<script src="script.js"></script>
+<script src="<c:url value='/resources/bootstrap/jquery-3.3.1.slim.min.js'/>"></script>
+<script src="<c:url value='/resources/bootstrap/popper.min.js'/>"></script>
+<script src="<c:url value='/resources/bootstrap/bootstrap.min.js'/>"></script>
 </html>

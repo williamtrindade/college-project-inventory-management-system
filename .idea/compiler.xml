@@ -9,9 +9,6 @@
         <module name="estoque" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="estoque" target="11" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

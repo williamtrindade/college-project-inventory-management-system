@@ -4,10 +4,14 @@ public class Produto {
     private int id;
     private String nome;
     private String descricao;
-    private Float preco;
-    private int quantidade;
 
-    public Produto(int id, String nome, String descricao, float preco, int quantidade) {
+    public Produto(int id, String nome, String descricao) {
+
+    }
+
+    public Produto(String nome, String descricao) {
+        this.nome      = nome;
+        this.descricao = descricao;
     }
 
     public int getId() {
@@ -32,21 +36,5 @@ public class Produto {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
-    }
-
-    public float getPreco() {
-        return preco;
-    }
-
-    public void setPreco(float preco) {
-        this.preco = preco;
-    }
-
-    public int getQuantidade() {
-        return quantidade;
-    }
-
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
     }
 }

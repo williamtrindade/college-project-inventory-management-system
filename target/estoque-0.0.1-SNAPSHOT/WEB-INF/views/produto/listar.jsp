@@ -1,11 +1,14 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="<c:url value='/resources/bootstrap/bootstrap.min.css' />" type="text/css"/>
+    <link rel="stylesheet" href="<c:url value='/resources/css/style.css'/>"/>
     <title>JetEstoque - Produtos</title>
 </head>
 <body>
@@ -19,16 +22,16 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="home.html">Dashboard <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="<c:url value="/"/>Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="produtos.html">Produtos</a>
+                        <a class="nav-link active" href="<c:url value="/produtos"/>">Produtos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="clientes.html">Clientes</a>
+                        <a class="nav-link" href="<c:url value="/clientes"/>">Clientes</a>
                     </li>
                     <li class="nav-item">
-                            <a class="nav-link" href="vendas.html">Vendas</a>
+                            <a class="nav-link" href="<c:url value="/vendas"/>">Vendas</a>
                     </li>
                 </ul>
             </div>
@@ -52,7 +55,7 @@
         <div class="section">
             <div class="container">
                 <h3 style="margin-top:1%;text-align:center">Produtos</h3>
-                <a href="novo-produto.html" class="btn btn-primary mb-3">Cadastrar Produto</a>
+                <a href="<c:url value="/produtos/cadastrar"/>" class="btn btn-primary mb-3">Cadastrar Produto</a>
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
                         <table class="table ">
@@ -61,43 +64,36 @@
                                     <th scope="col">Nome</th>
                                     <th scope="col">Descrição</th>
                                     <th scope="col">Quantidade</th>
-                                    <th scope="col">Preço</th>
-                                    <th scope="col">Ação</th>
+                                    <th scope="col">Ações</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>
-                                        <a href="editar-produto.html" class="btn btn-info">
-                                            Editar
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                <c:forEach var="prod" items="${produtos}">
+                                    <tr>
+                                        <th>${prod.nome}</th>
+                                        <td>${prod.descricao}</td>
+                                        <td>${prod.quantidade}</td>
                                         <td>
-                                            <button type="button" class="btn btn-info">
+                                            <a href="/produto/editar/${prod.id}" class="btn btn-info">
                                                 Editar
-                                            </button>
+                                            </a>
+                                            <a href="/produto/excluir/${prod.id}" class="btn btn-danger">
+                                                Excluir
+                                            </a>
                                         </td>
                                     </tr>
+                                </c:forEach>
                             </tbody>
+
                         </table>
                     </div>
                 </div>
-               
+
             </div>
         </div>
     </div>
 </body>
-<script src="bootstrap/jquery-3.3.1.slim.min.js"></script>
-<script src="bootstrap/popper.min.js"></script>
-<script src="bootstrap/bootstrap.min.js"></script>
+<script src="<c:url value='/resources/bootstrap/jquery-3.3.1.slim.min.js'/>"></script>
+<script src="<c:url value='/resources/bootstrap/popper.min.js'/>"></script>
+<script src="<c:url value='/resources/bootstrap/bootstrap.min.js'/>"></script>
 </html>

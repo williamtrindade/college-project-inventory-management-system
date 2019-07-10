@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="<c:url value='/resources/css/style.css'/>"/>
-    <title>JetEstoque - Login</title>
+    <title>Estoque - Login</title>
 </head>
 <body> 
     <!--NAVBAR-->
@@ -39,7 +39,7 @@
                     <div class="col-md-12">
                         <div class="row">
                             <div class="col-md-12" style="text-align: center;">
-                                <img src="<c:url value='/webapp/resources/img/logo.png' />" alt="" height="150px;align-self:center">
+                                <img src="<c:url value='/resources/img/logo.png' />" alt="" height="150px;align-self:center">
                             </div>
                         </div>
                         <div class="row">

@@ -10,8 +10,8 @@ public class ConnectPostgres {
         try {
             Class.forName("org.postgresql.Driver");
             conn = DriverManager.getConnection (
-                "jdbc:postgresql://localhost:5432/estoquejava",
-                "postgres",
+                "jdbc:postgresql://10.233.1.2:5432/db_estoque",
+                "pdp",
                 "1234"
             );
         } catch (ClassNotFoundException | SQLException e) {
