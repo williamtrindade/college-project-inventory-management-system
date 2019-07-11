@@ -8,31 +8,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="<c:url value='/resources/bootstrap/bootstrap.min.css' />" type="text/css"/>
-    <link rel="stylesheet" href="<c:url value="/resources/font-awesome/all.min.css"/>">
     <link rel="stylesheet" href="<c:url value='/resources/css/style.css'/>"/>
-    <title>JetEstoque - Produtos</title>
+    <title>Estoque - Produtos</title>
 </head>
 <body>
     <!--NAVBAR-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">jetestoque</a>
+            <a class="navbar-brand" href="<c:url value="/"/>">Estoque</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="<c:url value="/"/> ">Dashboard</a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="<c:url value="/"/>">Dashboard </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="<c:url value="/produto/listar"/>">Produtos</a>
+                        <a class="nav-link" href="<c:url value="/produto/listar"/>">Estoque</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<c:url value="/cliente/listar"/>">Clientes</a>
+                        <a class="nav-link" href="<c:url value="/entrada/listar"/>">Entradas</a>
                     </li>
                     <li class="nav-item">
-                            <a class="nav-link" href="<c:url value="/venda/listar"/>">Vendas</a>
+                        <a class="nav-link" href="<c:url value="/saida/listar"/>">Vendas</a>
                     </li>
                 </ul>
             </div>
@@ -56,7 +55,7 @@
         <div class="section">
             <div class="container">
                 <h3 style="margin-top:1%;text-align:center">Produtos</h3>
-                <a href="<c:url value="/produto/novo"/>" class="btn btn-primary mb-3"><i class="fas fa-add"></i> Cadastrar Produto</a>
+                <a href="<c:url value="/produto/novo"/>" class="btn btn-primary mb-3"><i class="fas fa-plus"></i> Cadastrar Produto</a>
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
                         <table class="table ">
@@ -79,7 +78,7 @@
                                                 <i class="fas fa-edit"></i> Editar
                                             </a>
                                             <a href="/produto/excluir/${produto.id}" class="btn btn-danger">
-                                                <i class="fas fa-delete"></i> Excluir
+                                                <i class="fas fa-trash"></i> Excluir
                                             </a>
                                         </td>
                                     </tr>
@@ -94,6 +93,7 @@
         </div>
     </div>
 </body>
+<script src="<c:url value="/resources/font-awesome/all.js"/>"/>
 <script src="<c:url value='/resources/bootstrap/jquery-3.3.1.slim.min.js'/>"></script>
 <script src="<c:url value='/resources/bootstrap/popper.min.js'/>"></script>
 <script src="<c:url value='/resources/bootstrap/bootstrap.min.js'/>"></script>

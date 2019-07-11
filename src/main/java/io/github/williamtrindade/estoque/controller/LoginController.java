@@ -16,16 +16,16 @@ public class LoginController {
 
     @GetMapping("/login")
     public String index(HttpServletRequest req) {
-        if (new Auth().check(req)) {
-            return "/app/dashboard";
+        if (Auth.check(req)) {
+            return "redirect:/";
         } else {
-            return "redirect:/login";
+            return "/auth/login";
         }
     }
 
     @GetMapping("/login/logout")
-    public String logout((HttpServletRequest req) {
-        if (new Auth().check(req)) {
+    public String logout(HttpServletRequest req) {
+        if (Auth.check(req)) {
             // logout
             return "redirect:/login";
         } else {
@@ -35,7 +35,7 @@ public class LoginController {
 
     @PostMapping("/login")
     public String store(Usuario user, HttpServletRequest req, ModelMap model) {
-        if (new Auth().check(req)) {
+        if (Auth.check(req)) {
             return "redirect:/";
         } else {
             if(new UsuarioDAO().validate(user)) {
@@ -44,7 +44,7 @@ public class LoginController {
                 return "redirect:/";
             } else {
                 model.addAttribute("erro", "E-mail ou senha incorretos");
-                return "/login";
+                return "/auth/login";
             }
         }
     }

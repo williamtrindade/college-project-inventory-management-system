@@ -8,13 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="<c:url value='/resources/bootstrap/bootstrap.min.css' />" type="text/css"/>
     <link rel="stylesheet" href="<c:url value='/resources/css/style.css'/>"/>
-    <title>JetEstoque - Home</title>
+    <title>Estoque - Dashboard</title>
 </head>
 <body>
     <!--NAVBAR-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">jetestoque</a>
+            <a class="navbar-brand" href="<c:url value="/"/>">Estoque</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

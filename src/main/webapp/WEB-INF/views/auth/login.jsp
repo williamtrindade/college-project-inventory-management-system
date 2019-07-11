@@ -15,7 +15,7 @@
     <!--NAVBAR-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">jetestoque</a>
+            <a class="navbar-brand" href="<c:url value="/"/>">Estoque</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -55,9 +55,9 @@
                                         <label for="senha">Senha</label>
                                         <input name="senha" type="password" class="form-control" id="senha" placeholder="Digite a sua senha">
                                     </div>
-                                    <c:if test="${not empty $.{erro}">
+                                    <c:if test="${erro!=null}">
                                         <div class="alert alert-danger" role="alert">
-                                            E-mail ou senha incorretos
+                                            ${erro}
                                         </div>
                                     </c:if>
                                     <div class="form-group form-check">
