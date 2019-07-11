@@ -1,40 +1,51 @@
 package io.github.williamtrindade.estoque.controller;
 
-//import io.github.williamtrindade.estoque.dao.UsuarioDAO;
 import io.github.williamtrindade.estoque.dao.UsuarioDAO;
+import io.github.williamtrindade.estoque.helper.Auth;
 import io.github.williamtrindade.estoque.model.Usuario;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-//import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class LoginController {
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String create(HttpServletRequest req) {
-        HttpSession session = req.getSession();
-        if(session.getAttribute("user") == null) {
-            return "/auth/login";
-        } else {
+
+    @GetMapping("/login")
+    public String index(HttpServletRequest req) {
+        if (new Auth().check(req)) {
             return "/app/dashboard";
+        } else {
+            return "redirect:/login";
         }
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.POST)
-    public String store(Usuario user, HttpServletRequest req) {
-        HttpSession session = req.getSession();
-        if(session.getAttribute("user") == null) { // não tem sessão
-            if(new UsuarioDAO().validate(user)) {
-                session.setAttribute("user", user);
-                return "/app/dashboard";
-            } else {
-                return "/auth/login";
-            }
+    @GetMapping("/login/logout")
+    public String logout((HttpServletRequest req) {
+        if (new Auth().check(req)) {
+            // logout
+            return "redirect:/login";
         } else {
-            return "/app/dashboard";
+            return "redirect:/login";
+        }
+    }
+
+    @PostMapping("/login")
+    public String store(Usuario user, HttpServletRequest req, ModelMap model) {
+        if (new Auth().check(req)) {
+            return "redirect:/";
+        } else {
+            if(new UsuarioDAO().validate(user)) {
+                HttpSession session = req.getSession();
+                session.setAttribute("user", user);
+                return "redirect:/";
+            } else {
+                model.addAttribute("erro", "E-mail ou senha incorretos");
+                return "/login";
+            }
         }
     }
 }

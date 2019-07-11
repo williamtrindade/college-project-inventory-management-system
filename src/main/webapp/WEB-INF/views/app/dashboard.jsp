@@ -21,16 +21,16 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="<c:url value="/"/>">Dashboard <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="<c:url value="/"/>">Dashboard </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<c:url value="/produtos"/>">Produtos</a>
+                        <a class="nav-link" href="<c:url value="/produto/listar"/>">Estoque</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="clientes.html">Clientes</a>
+                        <a class="nav-link" href="<c:url value="/entrada/listar"/>">Entradas</a>
                     </li>
                     <li class="nav-item">
-                            <a class="nav-link" href="vendas.html">Vendas</a>
+                        <a class="nav-link" href="<c:url value="/saida/listar"/>">Vendas</a>
                     </li>
                 </ul>
             </div>
@@ -42,7 +42,7 @@
                             Usuario
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Sair</a>
+                            <a class="dropdown-item" href="<c:url value="/login/logout"/>">Sair</a>
                         </div>
                     </li>
                 </ul>
@@ -59,12 +59,12 @@
                     <div class="col-md-12">
                         <div class="card rounded" style="margin-top: 4%;text-align: center;">
                             <div class="card-header">   
-                                Vendas             
+                                Estoque
                             </div>
                             <div class="card-body">
                                 <h1>500</h1>
-                                <p class="card-text">Vendas Realizadas.</p>
-                                <a href="nova-venda.html" class="btn btn-primary">Registar Nova Venda</a>
+                                <p class="card-text">Produtos em estoque</p>
+                                <a href="<c:url value="/produto/listar"/>" class="btn btn-primary">Visualizar Produtos</a>
                             </div>
                         </div>
                     </div>
@@ -73,26 +73,28 @@
                     <div class="col-md-6 col-sm-12">
                         <div class="card rounded" style="margin-top: 4%;">
                             <div class="card-header">   
-                                Produtos             
+                                Entradas
                             </div>
                             <div class="card-body">
                                 <h1>500</h1>
-                                <p class="card-text">Produtos cadastrados.</p>
-                                <a href="<c:url value="/produtos"/> class="btn btn-primary">Visualizar Produtos</a>
+                                <p class="card-text">Entradas efetuadas.</p>
+                                <a href="<c:url value="/entrada/nova"/> class="btn btn-primary">Registrar Entrada</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <div class="card rounded" style="margin-top: 4%;">
-                            <div class="card-header">   
-                                Clientes             
+                            <div class="card-header">
+                                Vendas
                             </div>
                             <div class="card-body">
-                                <h1>20</h1>
-                                <p class="card-text">Clientes cadastrados.</p>
-                                <a href="/produtos" class="btn btn-primary">Visualizar Produtos</a>
+                                <h1>500</h1>
+                                <p class="card-text">Vendas realizadas</p>
+                                <a href="<c:url value="/saida/nova"/> class="btn btn-primary">Registrar Venda</a>
                             </div>
                         </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

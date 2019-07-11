@@ -55,10 +55,16 @@
                                         <label for="senha">Senha</label>
                                         <input name="senha" type="password" class="form-control" id="senha" placeholder="Digite a sua senha">
                                     </div>
+                                    <c:if test="${not empty $.{erro}">
+                                        <div class="alert alert-danger" role="alert">
+                                            E-mail ou senha incorretos
+                                        </div>
+                                    </c:if>
                                     <div class="form-group form-check">
                                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                         <label class="form-check-label" for="exampleCheck1">Mantenha conectado</label>
                                     </div>
+
                                     <button type="submit" class="btn btn-primary">Fazer Login</button>
                                 </form>
                             </div>
