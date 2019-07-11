@@ -11,8 +11,8 @@ public class ConnectPostgres {
             Class.forName("org.postgresql.Driver");
             conn = DriverManager.getConnection (
                 "jdbc:postgresql://localhost:5432/db_estoque",
-                "postgres",
-                "1234"
+                "biffyclyro",
+                "nmrih382"
             );
         } catch (ClassNotFoundException | SQLException e) {
             

@@ -5,14 +5,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-/*
-create table usuario( 
-	id serial,
-	login varchar(60),
-	senha varchar(60),
-	primary key (id));
- */
 public class UsuarioDAO {
+
     public boolean create(Usuario usuario) {
         try (Connection conn = ConnectPostgres.getConnection()) {
             String sql = "INSERT INTO usuario (nome, email, senha) VALUES (?, ?, ?)";

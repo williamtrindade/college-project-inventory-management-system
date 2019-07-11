@@ -33,13 +33,12 @@ public class ProdutoDAO {
         List<ProdutoDTO> produtos = new LinkedList<>();
         try ( Connection conn = ConnectPostgres.getConnection() ) {
             Statement stmt = conn.createStatement();
-            ResultSet rs   = stmt.executeQuery("select p.id, p.nome, p.descricao, e.quantidade " +
-                    "from produto p, estoque e where p.id = e.produto_id;" );
+            ResultSet rs = stmt.executeQuery("select p.id, p.nome, p.descricao, e.quantidade " + "from produto p, estoque e where p.id = e.produto_id;" );
             while ( rs.next() ) {
                 produtos.add( new ProdutoDTO(
-                                rs.getInt("id"),
-                                rs.getString("nome"),
-                                rs.getString("descricao"),
+                        rs.getInt("id"),
+                        rs.getString("nome"),
+                        rs.getString("descricao"),
                         rs.getInt("quantidade")
                         )
                 );
@@ -66,5 +65,21 @@ public class ProdutoDAO {
             e.printStackTrace();
         }
         return false;
+    }
+
+    public Produto getProduto(int id) {
+        try (Connection conn = ConnectPostgres.getConnection() ) {
+            String sql = "SELECT * FROM USER WHERE id = ?";
+            PreparedStatement pre = conn.prepareStatement(sql);
+            pre.setInt(1, id);
+            ResultSet rs = pre.executeQuery("SELECT * FROM USER WHERE id = ?");
+            if ( rs.next() ) {
+                Produto produto = new Produto(rs.getInt("id"), rs.getString("nome"), rs.getString("descricao"));
+                return produto;
+            }
+        } catch ( Exception e ) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

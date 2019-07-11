@@ -4,13 +4,15 @@ import io.github.williamtrindade.estoque.dao.EstoqueDAO;
 import io.github.williamtrindade.estoque.dao.ProdutoDAO;
 import io.github.williamtrindade.estoque.helper.Auth;
 import io.github.williamtrindade.estoque.model.Produto;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.constraints.Null;
 
 
 @Controller
@@ -52,12 +54,17 @@ public class ProdutoController {
         }
     }
 
-    @GetMapping('/pruduto/editar')
-    public string edit(HttpServletRequest req) {
+    @GetMapping("/produto/editar/{id}")
+    public String edit(@PathVariable(required = false) int id, HttpServletRequest req) {
         if(Auth.check(req)) {
+            if(id != null) {
+                Produto produto = new ProdutoDAO().getProduto(id);
+            } else {
 
+            }
         } else {
-            
+            return "redirect:/login"
         }
     }
+
 }

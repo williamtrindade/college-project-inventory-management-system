@@ -78,7 +78,7 @@
                             <div class="card-body">
                                 <h1>500</h1>
                                 <p class="card-text">Entradas efetuadas.</p>
-                                <a href="<c:url value="/entrada/nova"/> class="btn btn-primary">Registrar Entrada</a>
+                                <a href="<c:url value="/entrada/nova"/>"class="btn btn-primary">Registrar Entrada</a>
                             </div>
                         </div>
                     </div>
@@ -90,7 +90,7 @@
                             <div class="card-body">
                                 <h1>500</h1>
                                 <p class="card-text">Vendas realizadas</p>
-                                <a href="<c:url value="/saida/nova"/> class="btn btn-primary">Registrar Venda</a>
+                                <a href="<c:url value="/saida/nova"/>" class="btn btn-primary">Registrar Venda</a>
                             </div>
                         </div>
                     </div>
