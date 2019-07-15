@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="db_estoque@10.233.1.2">
+<dataSource name="db_estoque@localhost">
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.15">
     <root id="1">
       <ServerVersion>9.6.12</ServerVersion>
@@ -11,10 +11,10 @@
       <IntrospectionStateNumber>48550</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
-      <Relations>sequence|table|29318|29320|1
+      <Relations>sequence|table|29349|29351|1
+sequence|table|29318|29320|1
 sequence|table|29326|29328|1
 sequence|table|29336|29338|1
-sequence|table|29349|29351|1
 </Relations>
     </database>
     <database id="3" parent="1" name="db_sicredi">

@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Implementation-Title: estoque
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: biffyclyro
+Built-By: william
 Implementation-Vendor-Id: io.github.williamtrindade
 Created-By: IntelliJ IDEA
 Build-Jdk: 11.0.3

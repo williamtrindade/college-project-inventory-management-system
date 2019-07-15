@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="db_estoque@10.233.1.2" uuid="3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8">
-      <database-info product="PostgreSQL" version="9.6.12" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="9.6.12" exact-driver-version="42.2">
+    <data-source name="db_estoque@localhost" uuid="b25c5f02-9b02-4f4e-a752-55ea40d16f39">
+      <database-info product="PostgreSQL" version="10.9 (Ubuntu 10.9-0ubuntu0.18.04.1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="10.9" exact-driver-version="42.2">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
-      <user-name>pdp</user-name>
-      <introspection-schemas>@:@</introspection-schemas>
+      <user-name>postgres</user-name>
+      <introspection-schemas>db_estoque:*</introspection-schemas>
     </data-source>
   </component>
 </project>

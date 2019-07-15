@@ -4,13 +4,28 @@ public class Produto {
     private int id;
     private String nome;
     private String descricao;
+    private String status;
 
-    public Produto(int id, String nome, String descricao) {
+
+    public Produto() {
 
     }
 
     public Produto(String nome, String descricao) {
-        this.nome      = nome;
+        this.nome = nome;
+        this.descricao = descricao;
+    }
+
+    public Produto(int id, String nome, String descricao, String status) {
+        this.id = id;
+        this.nome = nome;
+        this.descricao = descricao;
+        this.status = status;
+    }
+
+    public Produto(int id, String nome, String descricao) {
+        this.id = id;
+        this.nome = nome;
         this.descricao = descricao;
     }
 
@@ -36,5 +51,13 @@ public class Produto {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

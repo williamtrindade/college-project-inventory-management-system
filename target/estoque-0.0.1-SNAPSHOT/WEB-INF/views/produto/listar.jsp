@@ -21,10 +21,10 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="<c:url value="/"/>">Dashboard </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="<c:url value="/produto/listar"/>">Estoque</a>
                     </li>
                     <li class="nav-item">
@@ -43,7 +43,7 @@
                             Usuario
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Sair</a>
+                            <a class="dropdown-item" href="login/logout">Sair</a>
                         </div>
                     </li>
                 </ul>
@@ -58,13 +58,24 @@
                 <a href="<c:url value="/produto/novo"/>" class="btn btn-primary mb-3"><i class="fas fa-plus"></i> Cadastrar Produto</a>
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
+                        <c:if test="${mensagem!=null}">
+                            <div class="alert alert-success" role="alert">
+                                    ${mensagem}
+                            </div>
+                        </c:if>
+                        <c:if test="${erro!=null}">
+                            <div class="alert alert-danger" role="alert">
+                                    ${erro}
+                            </div>
+                        </c:if>
                         <table class="table ">
                             <thead>
                                 <tr>
                                     <th scope="col">Nome</th>
                                     <th scope="col">Descrição</th>
                                     <th scope="col">Quantidade</th>
-                                    <th scope="col">Ações</th>
+                                    <th scope="col">Editar</th>
+                                    <th scope="col">Excluir</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -74,12 +85,15 @@
                                         <td>${produto.descricao}</td>
                                         <td>${produto.quantidade}</td>
                                         <td>
-                                            <a href="/produto/editar/${produto.id}" class="btn btn-info">
+                                            <a href="<c:url value="/produto/editar/${produto.id}"/>" class="btn btn-info">
                                                 <i class="fas fa-edit"></i> Editar
                                             </a>
-                                            <a href="/produto/excluir/${produto.id}" class="btn btn-danger">
-                                                <i class="fas fa-trash"></i> Excluir
-                                            </a>
+                                        </td>
+                                        <td>
+                                            <form action="<c:url value="/produto/excluir"/>" method="POST">
+                                                <input type="hidden" name="produto_id" value="${produto.id}">
+                                                <button type="submit" class="btn btn-danger"> <i class='fas fa-trash'></i> Excluir</button>
+                                            </form>
                                         </td>
                                     </tr>
                                 </c:forEach>

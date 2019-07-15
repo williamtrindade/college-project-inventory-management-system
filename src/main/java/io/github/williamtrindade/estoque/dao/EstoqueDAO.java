@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 
 public class EstoqueDAO {
 
-    public boolean insertEstoque(int produtoInserido) {
+    public boolean create(int produtoInserido) {
         try (Connection conn = ConnectPostgres.getConnection() ) {
             String sql = "INSERT INTO estoque (produto_id, quantidade) values (?, ?)";
             PreparedStatement pre = conn.prepareStatement(sql);

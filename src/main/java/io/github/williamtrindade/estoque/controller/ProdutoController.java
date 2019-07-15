@@ -9,10 +9,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.validation.constraints.Null;
 
 
 @Controller
@@ -21,7 +19,7 @@ public class ProdutoController {
     @GetMapping("/produto/listar")
     public String index(HttpServletRequest req, ModelMap model) {
         if (Auth.check(req)) {
-            model.addAttribute("produtos", new ProdutoDAO().getProdutos());
+            model.addAttribute("produtos", new ProdutoDAO().list());
             return "/produto/listar";
         } else {
             return "redirect:/login";
@@ -40,8 +38,8 @@ public class ProdutoController {
     @PostMapping("/produto/novo")
     public String store(HttpServletRequest req, String nome, String descricao) {
         if(Auth.check(req)) {
-            int produtoInserido = new ProdutoDAO().insertProduto(new Produto(nome, descricao));
-            boolean estoqueInserido = new EstoqueDAO().insertEstoque(produtoInserido);
+            int produtoInserido = new ProdutoDAO().create(new Produto(nome, descricao));
+            boolean estoqueInserido = new EstoqueDAO().create(produtoInserido);
             if(produtoInserido != 0 && estoqueInserido == true) {
                 return "redirect:/produto/listar";
             } else {
@@ -55,15 +53,48 @@ public class ProdutoController {
     }
 
     @GetMapping("/produto/editar/{id}")
-    public String edit(@PathVariable(required = false) int id, HttpServletRequest req) {
+    public String edit(@PathVariable(required = false) int id, HttpServletRequest req, ModelMap model) {
         if(Auth.check(req)) {
-            if(id != null) {
-                Produto produto = new ProdutoDAO().getProduto(id);
-            } else {
+            int id_produto = Integer.parseInt(String.valueOf(id));
+            if(id_produto > 0) {
+                model.addAttribute("produto", new ProdutoDAO().get(id_produto));
+                return "/produto/editar";
 
+            } else {
+                return "redirect:/";
             }
         } else {
-            return "redirect:/login"
+            return "redirect:/login";
+        }
+    }
+
+    @PostMapping("/produto/editar")
+    public String update(HttpServletRequest req, Produto produto, ModelMap model) {
+        if(Auth.check(req)) {
+            if(new ProdutoDAO().update(produto)) {
+                model.addAttribute("mensagem", "Produto Atualizado");
+                return "redirect:/produto/listar";
+            } else {
+                model.addAttribute("erro", "Erro ao atualizar Produto");
+                return "/produto/editar/" + produto.getId();
+            }
+        } else {
+            return "redirect:/login";
+        }
+    }
+
+    @PostMapping("/produto/excluir")
+    public String destroy(HttpServletRequest req, int produto_id, ModelMap model) {
+        if(Auth.check(req)) {
+            if(new ProdutoDAO().destroy(produto_id)) {
+                model.addAttribute("mensagem", "Produto Removido");
+                return "redirect:/produto/listar";
+            } else {
+                model.addAttribute("erro", "Erro ao remover Produto");
+                return "redirect:/produto/listar";
+            }
+        } else {
+            return "redirect:/login";
         }
     }
 

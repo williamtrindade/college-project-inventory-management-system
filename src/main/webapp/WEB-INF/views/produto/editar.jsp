@@ -60,7 +60,7 @@
                     <form method="POST" action="<c:url value="/produto/editar"/>">
                         <div class="form-group">
                             <label for="nome">Nome</label>
-                            <input value="${produto.nome}" autocomplete="false" name="nome" type="text" class="form-control" id="nome" aria-describedby="nomeHelp" placeholder="Digite o nome">
+                            <input value="${produto.nome}" name="nome" type="text" class="form-control" id="nome" aria-describedby="nomeHelp" placeholder="Digite o nome">
                             <small id="nomeHelp" class="form-text text-muted">Dar um nome claro e simples te ajuda na pesquisa :).</small>
                         </div>
                         <div class="form-group">
@@ -68,7 +68,12 @@
                             <input value="${produto.descricao}" name="descricao" type="text" class="form-control" id="descricao" aria-describedby="descHelp" placeholder="Digite a descrição">
                             <small id="descHelp" class="form-text text-muted">Descreva o produto.</small>
                         </div>
-                        <input type="hidden" name="produto_id" value="${produto.id}">
+                        <c:if test="${erro!=null}">
+                            <div class="alert alert-danger" role="alert">
+                                    ${erro}
+                            </div>
+                        </c:if>
+                        <input type="hidden" name="id" value="${produto.id}">
                         <button type="submit" class="btn btn-success"><i class="fas fa-check-circle"></i> Finalizar Edição</button>
                         <a href="<c:url value="/produto/listar"/>" class="btn btn-outline-secondary">Voltar</a>
                     </form>
