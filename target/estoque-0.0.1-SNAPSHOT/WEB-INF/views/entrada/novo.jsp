@@ -21,13 +21,13 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" >
             <ul class="navbar-nav">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="<c:url value="/"/>">Dashboard </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<c:url value="/produto/listar"/>">Estoque</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="<c:url value="/entrada/listar"/>">Entradas</a>
                 </li>
                 <li class="nav-item">
@@ -61,18 +61,22 @@
                         <div class="form-group">
                             <label for="produto">Selecione um produto</label>
 
-                            <select class="form-control" name="produto" id="produto">
+                            <select class="form-control" name="produto_id" id="produto">
                                 <c:forEach items="${produtos}" var="produto">
-                                    <option value="${produto}">${produto.nome}</option>
+                                    <option value="${produto.id}">${produto.nome}</option>
                                 </c:forEach>
                             </select>
                             <div class="form-group">
                                 <label for="preco">Preço</label>
-                                <input type="text" class="form-control" id="preco" placeholder="R$">
+                                <input name="preco" type="text" class="form-control" id="preco" placeholder="R$">
                             </div>
                             <div class="form-group">
                                 <label for="data">Data</label>
-                                <input type="date" class="form-control" id="data">
+                                <input name="data" type="date" class="form-control" id="data">
+                            </div>
+                            <div class="form-group">
+                                <label for="quantidade">Quantidade</label>
+                                <input name="quantidade" type="number" class="form-control" id="quantidade">
                             </div>
                         </div>
 

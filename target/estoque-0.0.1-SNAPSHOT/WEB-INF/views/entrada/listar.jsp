@@ -24,10 +24,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<c:url value="/"/>">Dashboard </a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item ">
                     <a class="nav-link" href="<c:url value="/produto/listar"/>">Estoque</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="<c:url value="/entrada/listar"/>">Entradas</a>
                 </li>
                 <li class="nav-item">
@@ -74,6 +74,7 @@
                                 <th scope="col">Nome do Produto</th>
                                 <th scope="col">Preço</th>
                                 <th scope="col">Data</th>
+                                <th scope="col">Quantidade</th>
                                 <th scope="col">Editar</th>
                                 <th scope="col">Excluir</th>
                             </tr>
@@ -84,6 +85,7 @@
                                 <th>${entrada.produto.nome}</th>
                                 <td>${entrda.preco}</td>
                                 <td>${entrada.data}</td>
+                                <td>${entrada.quantidade}</td>
                                 <td>
                                     <a href="<c:url value="/entrada/editar/${entrada.id}"/>" class="btn btn-info">
                                         <i class="fas fa-edit"></i> Editar

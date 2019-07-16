@@ -7,21 +7,24 @@ public class Entrada {
     private Produto produto;
     private float preco;
     private Date data;
+    private int quantidade;
 
     public Entrada() {
     }
 
-    public Entrada(Produto produto, float preco, Date data) {
+    public Entrada(Produto produto, float preco, Date data, int quantidade) {
         this.produto = produto;
         this.preco = preco;
         this.data = data;
+        this.quantidade = quantidade;
     }
 
-    public Entrada(int id, Produto produto, float preco, Date data) {
+    public Entrada(int id, Produto produto, float preco, Date data, int quantidade) {
         this.id = id;
         this.produto = produto;
         this.preco = preco;
         this.data = data;
+        this.quantidade = quantidade;
     }
 
     public int getId() {
@@ -54,5 +57,13 @@ public class Entrada {
 
     public void setData(Date data) {
         this.data = data;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
     }
 }

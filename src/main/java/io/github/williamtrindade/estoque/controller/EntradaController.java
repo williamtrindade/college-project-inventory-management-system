@@ -1,13 +1,18 @@
 package io.github.williamtrindade.estoque.controller;
 
 import io.github.williamtrindade.estoque.dao.EntradaDAO;
+import io.github.williamtrindade.estoque.dao.EstoqueDAO;
 import io.github.williamtrindade.estoque.dao.ProdutoDAO;
 import io.github.williamtrindade.estoque.helper.Auth;
+import io.github.williamtrindade.estoque.model.Entrada;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.servlet.http.HttpServletRequest;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 @Controller
 public class EntradaController {
@@ -32,24 +37,32 @@ public class EntradaController {
             return "redirect:/login";
         }
     }
-    /**
-    @PostMapping("/produto/novo")
-    public String store(HttpServletRequest req, String nome, String descricao) {
+
+    @PostMapping("/entrada/novo")
+    public String store(HttpServletRequest req, ModelMap modelMap, int produto_id, String preco, String data, int quantidade) throws ParseException {
         if(Auth.check(req)) {
-            int produtoInserido = new ProdutoDAO().create(new Produto(nome, descricao));
-            boolean estoqueInserido = new EstoqueDAO().create(produtoInserido);
-            if(produtoInserido != 0 && estoqueInserido == true) {
-                return "redirect:/produto/listar";
+            SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+            String novoPreco = preco.replace(",", ".");
+            Entrada entrada = new Entrada(new ProdutoDAO().get(produto_id), Float.parseFloat(novoPreco), formatter.parse(data), quantidade);
+
+            // crio uma linha na tabela entrada
+            if(new EntradaDAO().create(entrada)) {
+                // somo o quantidade do produto que entrou na tabela estoque
+                if(new EstoqueDAO().addQuantity(new EstoqueDAO().get(entrada.getProduto().getId()))) {
+                    modelMap.addAttribute("mensagem", "Entrada Registrada com sucesso");
+                    return "redirect:/entrada/listar";
+                }
             } else {
-                ModelMap model = new ModelMap();
-                model.addAttribute("erro", "Erro ao Cadastrar Produto");
-                return "redirect:/produto/novo";
+                modelMap.addAttribute("erro", "Erro ao registrar Entrada");
+                return "/entrada/editar";
             }
         } else {
             return "redirect:/login";
         }
+        return "redirect:/login";
     }
 
+    /*
     @GetMapping("/produto/editar/{id}")
     public String edit(@PathVariable(required = false) int id, HttpServletRequest req, ModelMap model) {
         if(Auth.check(req)) {

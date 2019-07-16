@@ -7,39 +7,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a8ce489-2622-4cf7-bd45-0d95f50237a1" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/controller/EntradaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/EntradaDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/model/Entrada.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/entrada/listar.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/entrada/novo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/model/Estoque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8/storage_v2/_src_/database/db_estoque.t9cbZQ/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b25c5f02-9b02-4f4e-a752-55ea40d16f39.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b25c5f02-9b02-4f4e-a752-55ea40d16f39.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b25c5f02-9b02-4f4e-a752-55ea40d16f39/storage_v2/_src_/database/db_estoque.t9cbZQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b25c5f02-9b02-4f4e-a752-55ea40d16f39/storage_v2/_src_/database/db_estoque.t9cbZQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b25c5f02-9b02-4f4e-a752-55ea40d16f39/storage_v2/_src_/database/db_estoque.t9cbZQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b25c5f02-9b02-4f4e-a752-55ea40d16f39/storage_v2/_src_/database/db_estoque.t9cbZQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b25c5f02-9b02-4f4e-a752-55ea40d16f39/storage_v2/_src_/database/db_estoque.t9cbZQ/schema/pg_temp_1.zkWuFg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b25c5f02-9b02-4f4e-a752-55ea40d16f39/storage_v2/_src_/database/db_estoque.t9cbZQ/schema/pg_temp_1.zkWuFg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b25c5f02-9b02-4f4e-a752-55ea40d16f39/storage_v2/_src_/database/db_estoque.t9cbZQ/schema/pg_toast.33HYYw.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b25c5f02-9b02-4f4e-a752-55ea40d16f39/storage_v2/_src_/database/db_estoque.t9cbZQ/schema/pg_toast.33HYYw.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b25c5f02-9b02-4f4e-a752-55ea40d16f39/storage_v2/_src_/database/db_estoque.t9cbZQ/schema/pg_toast_temp_1.5ixBaA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b25c5f02-9b02-4f4e-a752-55ea40d16f39/storage_v2/_src_/database/db_estoque.t9cbZQ/schema/pg_toast_temp_1.5ixBaA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b25c5f02-9b02-4f4e-a752-55ea40d16f39/storage_v2/_src_/database/db_estoque.t9cbZQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b25c5f02-9b02-4f4e-a752-55ea40d16f39/storage_v2/_src_/database/db_estoque.t9cbZQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/controller/ProdutoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/controller/ProdutoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/ConnectPostgres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/ConnectPostgres.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/controller/EntradaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/controller/EntradaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/EntradaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/EntradaDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/EstoqueDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/EstoqueDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/ProdutoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/ProdutoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/model/Cliente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/model/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/model/Produto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/produto/editar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/produto/editar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/produto/listar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/produto/listar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/github/williamtrindade/estoque/controller/ProdutoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/williamtrindade/estoque/controller/ProdutoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/github/williamtrindade/estoque/dao/ConnectPostgres.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/williamtrindade/estoque/dao/ConnectPostgres.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/model/Entrada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/model/Entrada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/entrada/listar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/entrada/listar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/entrada/novo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/entrada/novo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/github/williamtrindade/estoque/controller/EntradaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/williamtrindade/estoque/controller/EntradaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/github/williamtrindade/estoque/dao/EntradaDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/williamtrindade/estoque/dao/EntradaDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/io/github/williamtrindade/estoque/dao/EstoqueDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/williamtrindade/estoque/dao/EstoqueDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/github/williamtrindade/estoque/dao/ProdutoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/williamtrindade/estoque/dao/ProdutoDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/github/williamtrindade/estoque/model/Produto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/williamtrindade/estoque/model/Produto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/github/williamtrindade/estoque/model/Entrada.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/williamtrindade/estoque/model/Entrada.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/WEB-INF/classes/io/github/williamtrindade/estoque/controller/ProdutoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/WEB-INF/classes/io/github/williamtrindade/estoque/controller/ProdutoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/WEB-INF/classes/io/github/williamtrindade/estoque/dao/ConnectPostgres.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/WEB-INF/classes/io/github/williamtrindade/estoque/dao/ConnectPostgres.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/WEB-INF/classes/io/github/williamtrindade/estoque/controller/EntradaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/WEB-INF/classes/io/github/williamtrindade/estoque/controller/EntradaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/WEB-INF/classes/io/github/williamtrindade/estoque/dao/EntradaDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/WEB-INF/classes/io/github/williamtrindade/estoque/dao/EntradaDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/WEB-INF/classes/io/github/williamtrindade/estoque/dao/EstoqueDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/WEB-INF/classes/io/github/williamtrindade/estoque/dao/EstoqueDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/WEB-INF/classes/io/github/williamtrindade/estoque/dao/ProdutoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/WEB-INF/classes/io/github/williamtrindade/estoque/dao/ProdutoDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/WEB-INF/classes/io/github/williamtrindade/estoque/model/Produto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/WEB-INF/classes/io/github/williamtrindade/estoque/model/Produto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/WEB-INF/views/produto/editar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/WEB-INF/views/produto/editar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/WEB-INF/views/produto/listar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/WEB-INF/views/produto/listar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/WEB-INF/classes/io/github/williamtrindade/estoque/model/Entrada.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/WEB-INF/classes/io/github/williamtrindade/estoque/model/Entrada.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/WEB-INF/views/entrada/listar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/WEB-INF/views/entrada/listar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/WEB-INF/views/entrada/novo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/WEB-INF/views/entrada/novo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/resources/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/estoque-0.0.1-SNAPSHOT/resources/js/script.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -103,26 +99,19 @@
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db_estoque@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="db_estoque: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="entrada: table" type="69fad909:PgImplModel$LocalTable" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/entrada/novo.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/controller/EntradaController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+            <state relative-caret-position="39">
+              <caret line="43" column="69" selection-start-line="43" selection-start-column="69" selection-end-line="43" selection-end-column="69" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -132,8 +121,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -157,25 +146,26 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/app/dashboard.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/produto/novo.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/EstoqueDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/ConnectPostgres.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/produto/listar.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/ProdutoDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/model/Produto.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/produto/editar.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/controller/ProdutoController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/model/Entrada.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/EntradaDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/controller/EntradaController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/script.js" />
+        <option value="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/model/Entrada.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/entrada/listar.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/EntradaDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/model/Estoque.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/ProdutoDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/EstoqueDAO.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/entrada/novo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/controller/EntradaController.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="22" />
-    <option name="y" value="48" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="23" />
+    <option name="y" value="50" />
     <option name="width" value="1320" />
     <option name="height" value="692" />
   </component>
@@ -187,7 +177,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -247,15 +236,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="estoque" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="estoque" type="b2602c69:ProjectViewProjectNode" />
-              <item name="controle-de-estoque-spring-boot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="estoque" type="462c0819:PsiDirectoryNode" />
               <item name="helper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -288,6 +268,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="estoque" type="b2602c69:ProjectViewProjectNode" />
+              <item name="controle-de-estoque-spring-boot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -309,10 +298,21 @@
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="entrada" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="estoque" type="b2602c69:ProjectViewProjectNode" />
+              <item name="controle-de-estoque-spring-boot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="produto" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -437,10 +437,39 @@
     <option name="totallyTimeSpent" value="16220000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="25" width="1368" height="748" extended-state="6" />
+    <frame x="23" y="50" width="1320" height="692" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22272727" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2303459" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Database Console" order="0" weight="0.3297975" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848485" visible="true" weight="0.38938054" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39922854" />
+      <window_info anchor="bottom" id="Find" order="4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50151515" side_tool="true" weight="0.3542673" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49921384" weight="0.29951692" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Spring" order="14" />
+      <window_info anchor="bottom" id="Terminal" order="15" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.3871212" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22651514" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -464,36 +493,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.3871212" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23820755" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Web" order="2" side_tool="true" />
-      <window_info id="Designer" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="0" />
-      <window_info anchor="bottom" id="Database Console" order="1" weight="0.3297975" />
-      <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.3557522" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.39922854" />
-      <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5007862" side_tool="true" weight="0.32920355" />
-      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49921384" weight="0.29951692" />
-      <window_info anchor="bottom" id="Java Enterprise" order="14" />
-      <window_info anchor="bottom" id="Spring" order="15" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.40172955" />
+      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.3871212" />
       <window_info anchor="right" id="Maven" order="4" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
     </layout-to-restore>
@@ -513,33 +513,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8/database/db_estoque/schema/public/table/entrada">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="3fa91a2c-b825-421c-9bea-3279fb60a911">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8/database/db_estoque/schema/public/table/usuario">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="3fa91a2c-b825-421c-9bea-3279fb60a911">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8/database/db_estoque/schema/public/table/saida">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="3fa91a2c-b825-421c-9bea-3279fb60a911">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8/database/db_estoque/schema/public/table/entrada" />
+    <entry file="das://3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8/database/db_estoque/schema/public/table/usuario" />
+    <entry file="das://3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8/database/db_estoque/schema/public/table/saida" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cliente/listar.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/main.iml">
       <provider selected="true" editor-type-id="text-editor">
@@ -641,65 +617,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8/database/db_estoque/schema/public/table/estoque">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="574ef794-10bf-4653-99e2-fda465ef8f0f">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8/database/db_estoque/schema/public/table/estoque" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="das://3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8/database/db_estoque/schema/public/table/produto">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="bec7ec17-bdba-4cc1-851b-df49f25ca64e">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://3b8b7c9d-f8c1-4252-9467-79e4bb5fb7d8/database/db_estoque/schema/public/table/produto" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b25c5f02-9b02-4f4e-a752-55ea40d16f39/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/EstoqueDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/model/Cliente.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/produto/listar.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="181">
+          <caret line="75" column="52" selection-start-line="75" selection-start-column="52" selection-end-line="75" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/produto/editar.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="75" column="53" selection-start-line="75" selection-start-column="53" selection-end-line="75" selection-end-column="53" />
+        <state relative-caret-position="120">
+          <caret line="17" column="47" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/model/Produto.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/controller/ProdutoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        <state relative-caret-position="255">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/model/Cliente.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="9" selection-end-column="28" />
+        <state relative-caret-position="15">
+          <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dto/ProdutoDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#424#425#0" expanded="true" />
             <element signature="e#449#450#0" expanded="true" />
@@ -721,93 +679,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/ProdutoDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/model/Entrada.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="61" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
-          <folding>
-            <element signature="e#709#710#0" expanded="true" />
-            <element signature="e#739#740#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/produto/novo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="62" column="41" selection-end-line="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/produto/listar.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="75" column="52" selection-start-line="75" selection-start-column="52" selection-end-line="75" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/EntradaDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="17" column="47" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/controller/ProdutoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/controller/EntradaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://b25c5f02-9b02-4f4e-a752-55ea40d16f39/database/db_estoque/schema/public/table/entrada" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/entrada/listar.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+        <state relative-caret-position="615">
+          <caret line="86" column="56" lean-forward="true" selection-start-line="86" selection-start-column="56" selection-end-line="86" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/ProdutoDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="68" selection-start-line="68" selection-end-line="82" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/EstoqueDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="50" column="44" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/produto/editar.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="75" column="53" selection-start-line="75" selection-start-column="53" selection-end-line="75" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/model/Produto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/entrada/novo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        <state relative-caret-position="300">
+          <caret line="78" column="55" selection-start-line="78" selection-start-column="55" selection-end-line="78" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/produto/novo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="69" column="34" lean-forward="true" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/EntradaDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/model/Estoque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/model/Entrada.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="e#749#750#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jrt:///usr/lib/jvm/default-java!/java.base/java/lang/Float.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/controller/EntradaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="43" column="69" selection-start-line="43" selection-start-column="69" selection-end-line="43" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
