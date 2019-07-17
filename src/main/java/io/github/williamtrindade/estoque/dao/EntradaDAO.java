@@ -14,7 +14,7 @@ public class EntradaDAO {
             PreparedStatement pre = conn.prepareStatement(sql);
 
             pre.setInt(1, entrada.getProduto().getId());
-            pre.setDate(2, (Date) entrada.getData());
+            pre.setDate(2, new Date(entrada.getData().getTime()));
             pre.setFloat(3, entrada.getPreco());
             pre.setInt(4, entrada.getQuantidade());
 

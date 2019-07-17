@@ -20,7 +20,7 @@ public class EntradaController {
     @GetMapping("/entrada/listar")
     public String index(HttpServletRequest req, ModelMap model) {
         if (Auth.check(req)) {
-            model.addAttribute("produtos", new EntradaDAO().list());
+            model.addAttribute("entradas", new EntradaDAO().list());
             return "/entrada/listar";
         } else {
             return "redirect:/login";
@@ -41,20 +41,23 @@ public class EntradaController {
     @PostMapping("/entrada/novo")
     public String store(HttpServletRequest req, ModelMap modelMap, int produto_id, String preco, String data, int quantidade) throws ParseException {
         if(Auth.check(req)) {
-            SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+            SimpleDateFormat parser =  new SimpleDateFormat("yyyy-MM-dd");
+            // String to Date
+            java.util.Date dataf = parser.parse(data);
+
             String novoPreco = preco.replace(",", ".");
-            Entrada entrada = new Entrada(new ProdutoDAO().get(produto_id), Float.parseFloat(novoPreco), formatter.parse(data), quantidade);
+            Entrada entrada = new Entrada(new ProdutoDAO().get(produto_id), Float.parseFloat(novoPreco), dataf, quantidade);
 
             // crio uma linha na tabela entrada
             if(new EntradaDAO().create(entrada)) {
                 // somo o quantidade do produto que entrou na tabela estoque
-                if(new EstoqueDAO().addQuantity(new EstoqueDAO().get(entrada.getProduto().getId()))) {
+                if(new EstoqueDAO().addQuantity(entrada.getProduto().getId(), entrada.quantidade) {
                     modelMap.addAttribute("mensagem", "Entrada Registrada com sucesso");
                     return "redirect:/entrada/listar";
                 }
             } else {
                 modelMap.addAttribute("erro", "Erro ao registrar Entrada");
-                return "/entrada/editar";
+                return "/entrada/novo";
             }
         } else {
             return "redirect:/login";
