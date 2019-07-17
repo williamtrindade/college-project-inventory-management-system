@@ -6,19 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a8ce489-2622-4cf7-bd45-0d95f50237a1" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/model/Saida.java" afterDir="false" />
+    <list default="true" id="3a8ce489-2622-4cf7-bd45-0d95f50237a1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/b25c5f02-9b02-4f4e-a752-55ea40d16f39.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b25c5f02-9b02-4f4e-a752-55ea40d16f39.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/controller/EntradaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/controller/EntradaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/EntradaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/EntradaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/EstoqueDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/EstoqueDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/ProdutoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/dao/ProdutoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/entrada/listar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/entrada/listar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/entrada/novo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/entrada/novo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/produto/editar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/produto/editar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/produto/novo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/produto/novo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/saida/novo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/saida/novo.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/io/github/williamtrindade/estoque/controller/EntradaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/williamtrindade/estoque/controller/EntradaController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/io/github/williamtrindade/estoque/dao/EntradaDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/williamtrindade/estoque/dao/EntradaDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/io/github/williamtrindade/estoque/dao/EstoqueDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/williamtrindade/estoque/dao/EstoqueDAO.class" afterDir="false" />
@@ -436,7 +426,7 @@
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1368" height="748" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23787878" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23787878" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -599,13 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/entrada/listar.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="96" column="37" lean-forward="true" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/github/williamtrindade/estoque/controller/ProdutoController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-645">
@@ -690,6 +673,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
           <caret line="70" column="48" selection-start-line="70" selection-start-column="48" selection-end-line="70" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/dataSources/b25c5f02-9b02-4f4e-a752-55ea40d16f39.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/entrada/listar.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="30" column="44" lean-forward="true" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
         </state>
       </provider>
     </entry>
