@@ -41,24 +41,31 @@ public class SaidaController {
     @PostMapping("/saida/novo")
     public String store(HttpServletRequest req, ModelMap modelMap, int produto_id, String preco, String data, int quantidade) throws ParseException {
         if(Auth.check(req)) {
-            SimpleDateFormat parser =  new SimpleDateFormat("yyyy-MM-dd");
-            // String to Date
-            java.util.Date dataf = parser.parse(data);
+            int qtdProdutoNoEstoque = new EstoqueDAO().get(produto_id).getQuantidade();
+            if(quantidade <= qtdProdutoNoEstoque) {
+                SimpleDateFormat parser =  new SimpleDateFormat("yyyy-MM-dd");
+                // String to Date
+                java.util.Date dataf = parser.parse(data);
 
-            String novoPreco = preco.replace(",", ".");
-            Saida saida = new Saida(new ProdutoDAO().get(produto_id), Float.parseFloat(novoPreco), dataf, quantidade);
+                String novoPreco = preco.replace(",", ".");
+                Saida saida = new Saida(new ProdutoDAO().get(produto_id), Float.parseFloat(novoPreco), dataf, quantidade);
 
-            // crio uma linha na tabela saida
-            if(new SaidaDAO().create(saida)) {
-                // somo o quantidade do produto que entrou na tabela estoque
-                if(new EstoqueDAO().subtractAmount(saida.getProduto().getId(), saida.getQuantidade())) {
-                    modelMap.addAttribute("mensagem", "Saida Registrada com sucesso");
-                    return "redirect:/saida/listar";
+                // crio uma linha na tabela saida
+                if (new SaidaDAO().create(saida)) {
+                    // somo o quantidade do produto que entrou na tabela estoque
+                    if (new EstoqueDAO().subtractAmount(saida.getProduto().getId(), saida.getQuantidade())) {
+                        modelMap.addAttribute("mensagem", "Saida Registrada com sucesso");
+                        return "redirect:/saida/listar";
+                    }
+                } else {
+                    modelMap.addAttribute("erro", "Erro ao registrar Saida");
+                    return "/saida/novo";
                 }
-            } else {
-                modelMap.addAttribute("erro", "Erro ao registrar Saida");
+            } else if(quantidade > qtdProdutoNoEstoque) {
+                modelMap.addAttribute("erro", "Você não tem essa quantidade no estoque");
                 return "/saida/novo";
             }
+
         } else {
             return "redirect:/login";
         }

@@ -39,7 +39,7 @@
                     <!--USUÁRIO LOGADO-->
                     <li class="nav-item dropdown active">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Usuario
+                            ${session.getAttribute("user").getNome()}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="<c:url value="/login/logout"/>">Sair</a>
@@ -62,8 +62,8 @@
                                 Estoque
                             </div>
                             <div class="card-body">
-                                <h1>500</h1>
-                                <p class="card-text">Produtos em estoque</p>
+                                <h1>R$ ${lucro}</h1>
+                                <p class="card-text">Lucro</p>
                                 <a href="<c:url value="/produto/listar"/>" class="btn btn-primary">Visualizar Produtos</a>
                             </div>
                         </div>
@@ -76,9 +76,9 @@
                                 Entradas
                             </div>
                             <div class="card-body">
-                                <h1>500</h1>
-                                <p class="card-text">Entradas efetuadas.</p>
-                                <a href="<c:url value="/entrada/nova"/>"class="btn btn-primary">Registrar Entrada</a>
+                                <h1>R$ ${valorEntradas}</h1>
+                                <p class="card-text">Gastos</p>
+                                <a href="<c:url value="/entrada/novo"/>"class="btn btn-primary">Registrar Entrada</a>
                             </div>
                         </div>
                     </div>
@@ -88,9 +88,9 @@
                                 Vendas
                             </div>
                             <div class="card-body">
-                                <h1>500</h1>
-                                <p class="card-text">Vendas realizadas</p>
-                                <a href="<c:url value="/saida/nova"/>" class="btn btn-primary">Registrar Venda</a>
+                                <h1>R$ ${valorEntradas}</h1>
+                                <p class="card-text">Recebidos</p>
+                                <a href="<c:url value="/saida/novo"/>" class="btn btn-primary">Registrar Saída</a>
                             </div>
                         </div>
                     </div>

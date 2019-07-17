@@ -3,6 +3,7 @@ package io.github.williamtrindade.estoque.controller;
 import io.github.williamtrindade.estoque.dao.EntradaDAO;
 import io.github.williamtrindade.estoque.dao.EstoqueDAO;
 import io.github.williamtrindade.estoque.dao.ProdutoDAO;
+import io.github.williamtrindade.estoque.dao.SaidaDAO;
 import io.github.williamtrindade.estoque.helper.Auth;
 import io.github.williamtrindade.estoque.model.Entrada;
 import org.springframework.stereotype.Controller;
@@ -68,11 +69,17 @@ public class EntradaController {
     @PostMapping("/entrada/excluir")
     public String destroy(HttpServletRequest req, ModelMap model,int entrada_id, int produto_id, int quantidade) {
         if(Auth.check(req)) {
-            if(new EntradaDAO().destroy(entrada_id) && new EstoqueDAO().subtractAmount(produto_id, quantidade)) {
-                model.addAttribute("mensagem", "Entrada Removido");
-                return "redirect:/entrada/listar";
+            if(new SaidaDAO().productWasSell(produto_id)) {
+                model.addAttribute("erro", "Não é possível remover a entrada, pois esse produto já teve saída!");
+                model.addAttribute("entradas", new EntradaDAO().list());
+                return "/entrada/listar";
             } else {
-                return "redirect:/login";
+                if(new EntradaDAO().destroy(entrada_id) && new EstoqueDAO().subtractAmount(produto_id, quantidade)) {
+                    model.addAttribute("mensagem", "Entrada Removido");
+                    return "redirect:/entrada/listar";
+                } else {
+                    return "redirect:/login";
+                }
             }
         } else {
             return "redirect:/login";

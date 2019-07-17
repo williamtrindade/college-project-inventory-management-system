@@ -8,6 +8,20 @@ import java.util.List;
 
 public class SaidaDAO {
 
+    public Float values() {
+        try (Connection conn = ConnectPostgres.getConnection() ) {
+            String sql = "SELECT SUM(preco) FROM saida;";
+            PreparedStatement pre = conn.prepareStatement(sql);
+            ResultSet rs = pre.executeQuery();
+            if ( rs.next() ) {
+                return rs.getFloat("sum");
+            }
+        } catch ( Exception e ) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     public boolean create(Saida saida) {
         try ( Connection conn = ConnectPostgres.getConnection() ) {
             String sql = "INSERT INTO saida (produto_id, data, preco, quantidade) values (?, ?, ?, ?)";
@@ -46,6 +60,22 @@ public class SaidaDAO {
             e.printStackTrace();
         }
         return saidas;
+    }
+
+    public boolean productWasSell(int produto_id) {
+        List<Saida> saidas = new LinkedList<>();
+        try ( Connection conn = ConnectPostgres.getConnection() ) {
+            String sql = "SELECT * FROM saida where produto_id = ?";
+            PreparedStatement pre = conn.prepareStatement(sql);
+            pre.setInt(1, produto_id);
+            ResultSet rs = pre.executeQuery();
+            if(rs.next()) {
+                return true;
+            }
+        } catch ( Exception e ) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
     public boolean destroy(int id) {

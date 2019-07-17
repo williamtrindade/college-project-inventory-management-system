@@ -8,6 +8,20 @@ import java.util.List;
 
 public class EntradaDAO {
 
+    public Float values() {
+        try (Connection conn = ConnectPostgres.getConnection() ) {
+            String sql = "SELECT SUM(preco) FROM entrada";
+            PreparedStatement pre = conn.prepareStatement(sql);
+            ResultSet rs = pre.executeQuery();
+            if ( rs.next() ) {
+                return rs.getFloat("sum");
+            }
+        } catch ( Exception e ) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     public boolean create(Entrada entrada) {
         try ( Connection conn = ConnectPostgres.getConnection() ) {
             String sql = "INSERT INTO entrada (produto_id, data, preco, quantidade) values (?, ?, ?, ?)";

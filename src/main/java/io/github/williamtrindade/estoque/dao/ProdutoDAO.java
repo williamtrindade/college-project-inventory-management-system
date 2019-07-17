@@ -68,7 +68,7 @@ public class ProdutoDAO {
 
     public Produto getAnyStatus(int id) {
         try (Connection conn = ConnectPostgres.getConnection() ) {
-            String sql = "SELECT * FROM produto WHERE id = ? ";
+            String sql = "SELECT * FROM produto WHERE id = ?; ";
             PreparedStatement pre = conn.prepareStatement(sql);
             pre.setInt(1, id);
             ResultSet rs = pre.executeQuery();
@@ -84,7 +84,7 @@ public class ProdutoDAO {
 
     public Produto get(int id) {
         try (Connection conn = ConnectPostgres.getConnection() ) {
-            String sql = "SELECT * FROM produto WHERE id = ? AND status = 'ativo' ";
+            String sql = "SELECT * FROM produto WHERE id = ? AND status = 'ativo';";
             PreparedStatement pre = conn.prepareStatement(sql);
             pre.setInt(1, id);
             ResultSet rs = pre.executeQuery();

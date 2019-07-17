@@ -27,6 +27,8 @@ public class LoginController {
     public String logout(HttpServletRequest req) {
         if (Auth.check(req)) {
             // logout
+            HttpSession session = req.getSession();
+            session.invalidate();
             return "redirect:/login";
         } else {
             return "redirect:/login";

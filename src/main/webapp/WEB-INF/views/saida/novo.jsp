@@ -27,10 +27,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<c:url value="/produto/listar"/>">Estoque</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="<c:url value="/saida/listar"/>">Entradas</a>
-                </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="<c:url value="/entrada/listar"/>">Entradas</a>
+                </li>
+                <li class="nav-item active">
                     <a class="nav-link" href="<c:url value="/saida/listar"/>">Vendas</a>
                 </li>
             </ul>
@@ -40,7 +40,7 @@
                 <!--USUÁRIO LOGADO-->
                 <li class="nav-item dropdown active">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Usuario
+                        ${session.getAttribute("user").getNome()}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="<c:url value="/login/logout"/>">Sair</a>

@@ -40,10 +40,10 @@
                 <!--USUÁRIO LOGADO-->
                 <li class="nav-item dropdown active">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Usuario
+                        ${session.getAttribute("user").getNome()}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Sair</a>
+                        <a class="dropdown-item" href="<c:url value="/login/logout"/>">Sair</a>
                     </div>
                 </li>
             </ul>
