@@ -61,22 +61,22 @@
                         <div class="form-group">
                             <label for="produto">Selecione um produto</label>
 
-                            <select class="form-control" name="produto_id" id="produto">
+                            <select required class="form-control" name="produto_id" id="produto">
                                 <c:forEach items="${produtos}" var="produto">
                                     <option value="${produto.id}">${produto.nome}</option>
                                 </c:forEach>
                             </select>
                             <div class="form-group">
-                                <label for="preco">Preço</label>
-                                <input name="preco" type="text" class="form-control" id="preco" placeholder="R$">
+                                <label for="precop">Preço</label>
+                                <input required name="preco" type="number" class="form-control" id="precop" placeholder="R$">
                             </div>
                             <div class="form-group">
                                 <label for="data">Data</label>
-                                <input name="data" type="date" class="form-control" id="data">
+                                <input required name="data" type="date" class="form-control" id="data">
                             </div>
                             <div class="form-group">
                                 <label for="quantidade">Quantidade</label>
-                                <input name="quantidade" type="number" class="form-control" id="quantidade">
+                                <input required name="quantidade" type="number" class="form-control" id="quantidade">
                             </div>
                         </div>
 

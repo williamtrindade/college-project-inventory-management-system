@@ -24,13 +24,13 @@ public class EstoqueDAO {
         return false;
     }
 
-    public boolean addQuantity(int product_id, int quantidade) {
+    public boolean addQuantity(int produto_id, int quantidade) {
         try ( Connection conn = ConnectPostgres.getConnection() ) {
             String sql = "UPDATE estoque SET quantidade = quantidade + ? WHERE produto_id = ?";
             PreparedStatement pre = conn.prepareStatement(sql);
 
-            pre.setInt(1, product_id);
-            pre.setInt(2, quantidade);
+            pre.setInt(1, quantidade);
+            pre.setInt(2, produto_id);
 
             if ( pre.executeUpdate() > 0 ) {
                 return true;
@@ -42,13 +42,13 @@ public class EstoqueDAO {
         return false;
     }
 
-    public boolean subtractAmount(int product_id, int quantidade) {
+    public boolean subtractAmount(int produto_id, int quantidade) {
         try ( Connection conn = ConnectPostgres.getConnection() ) {
             String sql = "UPDATE estoque SET quantidade = quantidade - ? WHERE produto_id = ?";
             PreparedStatement pre = conn.prepareStatement(sql);
 
-            pre.setInt(1, product_id);
-            pre.setInt(2, quantidade);
+            pre.setInt(1, quantidade);
+            pre.setInt(2, produto_id);
 
             if ( pre.executeUpdate() > 0 ) {
                 return true;

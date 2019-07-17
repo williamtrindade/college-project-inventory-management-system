@@ -51,7 +51,7 @@ public class EntradaController {
             // crio uma linha na tabela entrada
             if(new EntradaDAO().create(entrada)) {
                 // somo o quantidade do produto que entrou na tabela estoque
-                if(new EstoqueDAO().addQuantity(entrada.getProduto().getId(), entrada.quantidade) {
+                if(new EstoqueDAO().addQuantity(entrada.getProduto().getId(), entrada.getQuantidade())) {
                     modelMap.addAttribute("mensagem", "Entrada Registrada com sucesso");
                     return "redirect:/entrada/listar";
                 }
@@ -64,52 +64,18 @@ public class EntradaController {
         }
         return "redirect:/login";
     }
-
-    /*
-    @GetMapping("/produto/editar/{id}")
-    public String edit(@PathVariable(required = false) int id, HttpServletRequest req, ModelMap model) {
+   
+    @PostMapping("/entrada/excluir")
+    public String destroy(HttpServletRequest req, ModelMap model,int entrada_id, int produto_id, int quantidade) {
         if(Auth.check(req)) {
-            int id_produto = Integer.parseInt(String.valueOf(id));
-            if(id_produto > 0) {
-                model.addAttribute("produto", new ProdutoDAO().get(id_produto));
-                return "/produto/editar";
-
+            if(new EntradaDAO().destroy(entrada_id) && new EstoqueDAO().subtractAmount(produto_id, quantidade)) {
+                model.addAttribute("mensagem", "Entrada Removido");
+                return "redirect:/entrada/listar";
             } else {
-                return "redirect:/";
+                return "redirect:/login";
             }
         } else {
             return "redirect:/login";
         }
     }
-
-    @PostMapping("/produto/editar")
-    public String update(HttpServletRequest req, Produto produto, ModelMap model) {
-        if(Auth.check(req)) {
-            if(new ProdutoDAO().update(produto)) {
-                model.addAttribute("mensagem", "Produto Atualizado");
-                return "redirect:/produto/listar";
-            } else {
-                model.addAttribute("erro", "Erro ao atualizar Produto");
-                return "/produto/editar/" + produto.getId();
-            }
-        } else {
-            return "redirect:/login";
-        }
-    }
-
-    @PostMapping("/produto/excluir")
-    public String destroy(HttpServletRequest req, int produto_id, ModelMap model) {
-        if(Auth.check(req)) {
-            if(new ProdutoDAO().destroy(produto_id)) {
-                model.addAttribute("mensagem", "Produto Removido");
-                return "redirect:/produto/listar";
-            } else {
-                model.addAttribute("erro", "Erro ao remover Produto");
-                return "redirect:/produto/listar";
-            }
-        } else {
-            return "redirect:/login";
-        }
-    }
-**/
 }

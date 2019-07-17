@@ -21,10 +21,10 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" >
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="<c:url value="/"/>">Dashboard </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="<c:url value="/produto/listar"/>">Estoque</a>
                     </li>
                     <li class="nav-item">
@@ -60,12 +60,12 @@
                         <form method="POST" action="<c:url value="/produto/novo"/>">
                             <div class="form-group">
                                 <label for="nome">Nome</label>
-                                <input autocomplete="false" name="nome" type="text" class="form-control" id="nome" aria-describedby="nomeHelp" placeholder="Digite o nome">
+                                <input required autocomplete="false" name="nome" type="text" class="form-control" id="nome" aria-describedby="nomeHelp" placeholder="Digite o nome">
                                 <small id="nomeHelp" class="form-text text-muted">Dar um nome claro e simples te ajuda na pesquisa :).</small>
                             </div>
                             <div class="form-group">
                                 <label for="descricao">Descrição</label>
-                                <input name="descricao" type="text" class="form-control" id="descricao" aria-describedby="descHelp" placeholder="Digite a descrição">
+                                <input required name="descricao" type="text" class="form-control" id="descricao" aria-describedby="descHelp" placeholder="Digite a descrição">
                                 <small id="descHelp" class="form-text text-muted">Descreva o produto.</small>
                             </div>
 

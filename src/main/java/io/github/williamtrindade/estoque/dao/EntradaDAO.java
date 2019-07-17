@@ -35,7 +35,7 @@ public class EntradaDAO {
             while ( rs.next() ) {
                 entradas.add( new Entrada (
                             rs.getInt("id"),
-                            new ProdutoDAO().get(rs.getInt("produto_id")),
+                            new ProdutoDAO().getAnyStatus(rs.getInt("produto_id")),
                             rs.getFloat("preco"),
                             rs.getDate("data"),
                             rs.getInt("quantidade")
@@ -46,6 +46,19 @@ public class EntradaDAO {
             e.printStackTrace();
         }
         return entradas;
+    }
+
+    public boolean destroy(int id) {
+        try (Connection conn = ConnectPostgres.getConnection() ) {
+            String sql = "DELETE FROM entrada WHERE id = ?";
+            PreparedStatement pre = conn.prepareStatement(sql);
+            pre.setInt(1, id);
+            pre.execute();
+            return true;
+        } catch ( Exception e ) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
 }

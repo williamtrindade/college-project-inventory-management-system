@@ -66,6 +66,22 @@ public class ProdutoDAO {
         return false;
     }
 
+    public Produto getAnyStatus(int id) {
+        try (Connection conn = ConnectPostgres.getConnection() ) {
+            String sql = "SELECT * FROM produto WHERE id = ? ";
+            PreparedStatement pre = conn.prepareStatement(sql);
+            pre.setInt(1, id);
+            ResultSet rs = pre.executeQuery();
+            if ( rs.next() ) {
+                Produto produto = new Produto(rs.getInt("id"), rs.getString("nome"), rs.getString("descricao"), rs.getString("status"));
+                return produto;
+            }
+        } catch ( Exception e ) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     public Produto get(int id) {
         try (Connection conn = ConnectPostgres.getConnection() ) {
             String sql = "SELECT * FROM produto WHERE id = ? AND status = 'ativo' ";
@@ -81,6 +97,7 @@ public class ProdutoDAO {
         }
         return null;
     }
+
 
     public boolean destroy(int id) {
         try (Connection conn = ConnectPostgres.getConnection() ) {

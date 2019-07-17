@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
@@ -75,7 +76,6 @@
                                 <th scope="col">Preço</th>
                                 <th scope="col">Data</th>
                                 <th scope="col">Quantidade</th>
-                                <th scope="col">Editar</th>
                                 <th scope="col">Excluir</th>
                             </tr>
                         </thead>
@@ -83,17 +83,15 @@
                         <c:forEach items="${entradas}" var="entrada">
                             <tr>
                                 <th>${entrada.produto.nome}</th>
-                                <td>${entrda.preco}</td>
-                                <td>${entrada.data}</td>
+                                <td>${entrada.preco}</td>
+                                <td><fmt:formatDate value="${entrada.data}" pattern="yyyy-MM-dd" /></td>
                                 <td>${entrada.quantidade}</td>
                                 <td>
-                                    <a href="<c:url value="/entrada/editar/${entrada.id}"/>" class="btn btn-info">
-                                        <i class="fas fa-edit"></i> Editar
-                                    </a>
-                                </td>
-                                <td>
                                     <form action="<c:url value="/entrada/excluir"/>" method="POST">
-                                        <input type="hidden" name="produto_id" value="${entrada.id}">
+                                        <input type="hidden" name="entrada_id" value="${entrada.id}">
+                                        <input type="hidden" name="produto_id" value="${entrada.produto.id}">
+                                        <input type="hidden" name="quantidade" value="${entrada.quantidade}">
+
                                         <button type="submit" class="btn btn-danger"> <i class='fas fa-trash'></i> Excluir</button>
                                     </form>
                                 </td>
