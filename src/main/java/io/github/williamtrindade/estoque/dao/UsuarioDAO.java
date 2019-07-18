@@ -7,6 +7,26 @@ import java.sql.ResultSet;
 
 public class UsuarioDAO {
 
+    public Usuario get(Usuario usuario) {
+        try (Connection conn = ConnectPostgres.getConnection()) {
+            String sql = "SELECT * FROM usuario WHERE email = ?";
+            PreparedStatement pre = conn.prepareStatement(sql);
+            pre.setString(1, usuario.getEmail());
+            ResultSet rs = pre.executeQuery();
+            if ( rs.next() ) {
+                Usuario user = new Usuario(
+                        rs.getString("nome"),
+                        rs.getString("email"),
+                        rs.getString("senha")
+                );
+                return user;
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return null;
+    }
+
     public boolean create(Usuario usuario) {
         try (Connection conn = ConnectPostgres.getConnection()) {
             String sql = "INSERT INTO usuario (nome, email, senha) VALUES (?, ?, ?)";

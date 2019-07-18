@@ -39,7 +39,7 @@
                     <!--USUÁRIO LOGADO-->
                     <li class="nav-item dropdown active">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            ${session.getAttribute("user").getNome()}
+                            ${sessionScope['user'].getNome()}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="<c:url value="/login/logout"/>">Sair</a>
@@ -62,7 +62,7 @@
                                 Estoque
                             </div>
                             <div class="card-body">
-                                <h1>R$ ${lucro}</h1>
+                                <h1>R$ ${valorSaidas - valorEntradas}</h1>
                                 <p class="card-text">Lucro</p>
                                 <a href="<c:url value="/produto/listar"/>" class="btn btn-primary">Visualizar Produtos</a>
                             </div>
@@ -88,7 +88,7 @@
                                 Vendas
                             </div>
                             <div class="card-body">
-                                <h1>R$ ${valorEntradas}</h1>
+                                <h1>R$ ${valorSaidas}</h1>
                                 <p class="card-text">Recebidos</p>
                                 <a href="<c:url value="/saida/novo"/>" class="btn btn-primary">Registrar Saída</a>
                             </div>

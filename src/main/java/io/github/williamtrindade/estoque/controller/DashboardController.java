@@ -17,7 +17,6 @@ public class DashboardController {
         if (new Auth().check(req)) {
             modelMap.addAttribute("valorEntradas" , new EntradaDAO().values());
             modelMap.addAttribute("valorSaidas" , new SaidaDAO().values());
-            modelMap.addAttribute("lucro" , new SaidaDAO().values() - new EntradaDAO().values());
             return "/app/dashboard";
         } else {
             return "redirect:/login";

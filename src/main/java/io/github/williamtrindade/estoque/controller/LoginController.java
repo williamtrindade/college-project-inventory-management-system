@@ -42,7 +42,7 @@ public class LoginController {
         } else {
             if(new UsuarioDAO().validate(user)) {
                 HttpSession session = req.getSession();
-                session.setAttribute("user", user);
+                session.setAttribute("user", new UsuarioDAO().get(user));
                 return "redirect:/";
             } else {
                 model.addAttribute("erro", "E-mail ou senha incorretos");
