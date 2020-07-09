@@ -1,9 +1,8 @@
-# controle-de-estoque-spring-boot
-Projeto de Controle de Estoque
+## inventory man. system
 
-## Spring Initializr  
+### Spring Initializr   
 https://start.spring.io/
-### Configuração:  
+### settings:  
 - Project: Maven  
 - Language: Java  
 - Spring Boot: 2.1.6
